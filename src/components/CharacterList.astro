@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+export type Props = {
+  characters: CollectionEntry<'characters'>[]
+}
+
+const { characters } = Astro.props
+---
+
+<dl>
+  {
+    characters.map((character) => (
+      <>
+        <dt>
+          <a href={`/c/${character.slug}`}>{character.data.name}</a>
+        </dt>
+        <dd>{character.data.tagLine}</dd>
+      </>
+    ))
+  }
+</dl>

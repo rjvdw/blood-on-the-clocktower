@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '../layouts/Base.astro'
+import CharacterList from '../components/CharacterList.astro'
 
 const characters = await getCollection('characters')
 ---
@@ -8,16 +9,5 @@ const characters = await getCollection('characters')
 <Layout title="Blood on the Clocktower">
   <h1>Blood on the Clocktower</h1>
 
-  <dl>
-    {
-      characters.map((character) => (
-        <>
-          <dt>
-            <a href={`/c/${character.slug}`}>{character.data.name}</a>
-          </dt>
-          <dd>{character.data.tagLine}</dd>
-        </>
-      ))
-    }
-  </dl>
+  <CharacterList characters={characters} />
 </Layout>

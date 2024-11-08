@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '../layouts/Base.astro'
+import CharacterList from '../components/CharacterList.astro'
+
+export async function getStaticPaths() {
+  return [
+    { params: { game: 'trouble-brewing' }, props: { title: 'Trouble Brewing' } },
+    { params: { game: 'sects-and-violets' }, props: { title: 'Sects & Violets' } },
+    { params: { game: 'bad-moon-rising' }, props: { title: 'Bad Moon Rising' } },
+  ]
+}
+
+const { title } = Astro.props
+const characters = await getCollection('characters', ({ data }) => data.game === title)
+---
+
+<Layout title={`${title} | Blood on the Clocktower`}>
+  <h1>{title}</h1>
+
+  <CharacterList characters={characters} />
+</Layout>
