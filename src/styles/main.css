@@ -1,3 +1,7 @@
+:root {
+  --page-max-inline-size: 45rem;
+}
+
 body {
   font-family: sans-serif;
 }
