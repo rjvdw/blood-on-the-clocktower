@@ -1,16 +1,23 @@
 ---
+import { getCollection } from 'astro:content'
+import Layout from '../layouts/Base.astro'
 
+const characters = await getCollection('characters')
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
-</html>
+<Layout title="Blood on the Clocktower">
+  <h1>Blood on the Clocktower</h1>
+
+  <dl>
+    {
+      characters.map((character) => (
+        <>
+          <dt>
+            <a href={`/c/${character.slug}`}>{character.data.name}</a>
+          </dt>
+          <dd>{character.data.tagLine}</dd>
+        </>
+      ))
+    }
+  </dl>
+</Layout>

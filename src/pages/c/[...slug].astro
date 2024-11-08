@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '../../layouts/Base.astro'
+
+export async function getStaticPaths() {
+  const characters = await getCollection('characters')
+  return characters.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+
+const { entry: character } = Astro.props
+const { Content } = await character.render()
+---
+
+<Layout title={`${character.data.name} | Blood on the Clocktower`}>
+  <h1>{character.data.name}</h1>
+  <Content />
+</Layout>
