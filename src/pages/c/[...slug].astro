@@ -15,6 +15,28 @@ const { Content } = await character.render()
 ---
 
 <Layout title={`${character.data.name} | Blood on the Clocktower`}>
-  <h1>{character.data.name}</h1>
+  <header>
+    <h1>{character.data.name}</h1>
+    <p class="tag-line">{character.data.tagLine}</p>
+  </header>
   <Content />
+  <footer>
+    <p>
+      <a href={character.data.source} target="_blank">Source</a>
+    </p>
+  </footer>
 </Layout>
+
+<style>
+  .tag-line {
+    font-style: italic;
+
+    &::before {
+      content: open-quote;
+    }
+
+    &::after {
+      content: close-quote;
+    }
+  }
+</style>

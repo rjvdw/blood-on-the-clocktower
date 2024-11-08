@@ -18,6 +18,29 @@ const { title } = Astro.props
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <nav>
+      <a href="/">Home</a>
+      <a href="/trouble-brewing">Trouble Brewing</a>
+      <a href="/sects-and-violets">Sects & Violets</a>
+      <a href="/bad-moon-rising">Bad Moon Rising</a>
+    </nav>
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
+
+<style>
+  nav,
+  main {
+    margin-inline: auto;
+    max-inline-size: 45rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-block-end: 4rem;
+  }
+</style>

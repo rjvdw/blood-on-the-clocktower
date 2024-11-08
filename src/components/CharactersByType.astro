@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import CharacterList from './CharacterList.astro'
+
+type Character = CollectionEntry<'characters'>
+type CharacterType = Character['data']['type']
+type Grouped = { type: CharacterType; characters: Character[] }[]
+
+export type Props = {
+  characters: Character[]
+}
+
+const { characters } = Astro.props
+const charactersByType = groupByType(characters)
+
+function groupByType(characters: Character[]): Grouped {
+  const grouped: Grouped = []
+  for (const character of characters) {
+    if (grouped.length === 0 || grouped[grouped.length - 1]!.type !== character.data.type)
+      [grouped.push({ type: character.data.type, characters: [] })]
+    grouped[grouped.length - 1]!.characters.push(character)
+  }
+  return grouped
+}
+---
+
+{
+  charactersByType.map(({ type, characters }) => (
+    <>
+      <h3>{type}</h3>
+      <CharacterList characters={characters} />
+    </>
+  ))
+}

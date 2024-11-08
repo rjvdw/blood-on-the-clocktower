@@ -15,8 +15,22 @@ const { characters } = Astro.props
         <dt>
           <a href={`/c/${character.slug}`}>{character.data.name}</a>
         </dt>
-        <dd>{character.data.tagLine}</dd>
+        <dd class="tag-line">{character.data.tagLine}</dd>
       </>
     ))
   }
 </dl>
+
+<style>
+  dd {
+    margin-block-start: 0.25rem;
+  }
+
+  dd + dt {
+    margin-block-start: 0.75rem;
+  }
+
+  .tag-line {
+    font-style: italic;
+  }
+</style>
