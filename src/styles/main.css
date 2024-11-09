@@ -1,7 +1,13 @@
 :root {
+  --base-background-color: light-dark(#eee, #333);
+  --base-foreground-color: light-dark(#111, #ddd);
+  --base-font: sans-serif;
   --page-max-inline-size: 45rem;
+  color-scheme: dark light;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: var(--base-font);
+  background-color: var(--base-background-color);
+  color: var(--base-foreground-color);
 }

@@ -1,0 +1,53 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import CharactersByType from './CharactersByType.astro'
+
+type Character = CollectionEntry<'characters'>
+type Grouped = { set: string | undefined; characters: Character[] }[]
+
+export type Props = {
+  characters: Character[]
+}
+
+const { characters } = Astro.props
+const charactersBySet = groupBySet(characters)
+
+function groupBySet(characters: Character[]): Grouped {
+  const grouped: Grouped = []
+  for (const character of characters) {
+    const set = determineSet(character.id)
+    if (grouped.length === 0 || grouped[grouped.length - 1]!.set !== set) {
+      grouped.push({ set, characters: [] })
+    }
+    grouped[grouped.length - 1]!.characters.push(character)
+  }
+  return grouped
+}
+
+function determineSet(id: string): string | undefined {
+  if (is('trouble-brewing')) return 'Trouble Brewing'
+  if (is('sects-and-violets')) return 'Sects & Violets'
+  if (is('bad-moon-rising')) return 'Bad Moon Rising'
+  if (is('travellers-and-fabled')) return 'Travellers and Fabled'
+  if (is('garden-of-sin')) return 'Garden of Sin'
+  if (is('the-tomb')) return 'The Tomb'
+  if (is('midnight-in-the-house-of-the-damned')) return 'Midnight in the House of the Damned'
+  if (is('the-greatest-show-on-earth')) return 'The Greatest Show on Earth'
+  return undefined
+
+  function is(set: string): boolean {
+    return id.substring(4).startsWith(set)
+  }
+}
+---
+
+{
+  charactersBySet.map(({ set, characters }) => (
+    <>
+      <h2>
+        {set ?? 'Experimental'} ({characters.length})
+      </h2>
+      <CharactersByType characters={characters} />
+    </>
+  ))
+}

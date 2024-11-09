@@ -4,22 +4,36 @@ import Layout from '../../layouts/Base.astro'
 
 export async function getStaticPaths() {
   const characters = await getCollection('characters')
-  return characters.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
+  return characters.map((character) => ({
+    params: { slug: character.slug },
+    props: { character },
   }))
 }
 
-const { entry: character } = Astro.props
+const { character } = Astro.props
 const { Content } = await character.render()
 ---
 
 <Layout title={`${character.data.name} | Blood on the Clocktower`}>
   <header>
-    <h1>{character.data.name}</h1>
+    <h1>{character.data.name} ({character.data.type})</h1>
     <p class="tag-line">{character.data.tagLine}</p>
   </header>
   <Content />
+  {
+    character.data.nightOrder?.first && (
+      <p class="first-night" data-order={character.data.nightOrder.first.order}>
+        <b>First night:</b> {character.data.nightOrder.first.description}
+      </p>
+    )
+  }
+  {
+    character.data.nightOrder?.other && (
+      <p class="other-nights" data-order={character.data.nightOrder.other.order}>
+        <b>Other nights:</b> {character.data.nightOrder.other.description}
+      </p>
+    )
+  }
   <footer>
     <p>
       <a href={character.data.source} target="_blank">Source</a>
@@ -28,6 +42,18 @@ const { Content } = await character.render()
 </Layout>
 
 <style>
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-block-end: 2rem;
+
+    & > * {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
   .tag-line {
     font-style: italic;
 

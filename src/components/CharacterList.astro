@@ -1,33 +1,102 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 
+type Character = CollectionEntry<'characters'>
 export type Props = {
-  characters: CollectionEntry<'characters'>[]
+  characters: Character[]
 }
 
 const { characters } = Astro.props
+function clz(character: Character): string {
+  return character.data.type.toLocaleLowerCase()
+}
 ---
 
 <dl>
   {
     characters.map((character) => (
-      <>
+      <div class:list={['character', clz(character)]}>
         <dt>
           <a href={`/c/${character.slug}`}>{character.data.name}</a>
         </dt>
-        <dd class="tag-line">{character.data.tagLine}</dd>
-      </>
+        <dd class="tag-list">{character.data.tagLine}</dd>
+        {character.data.nightOrder?.first && (
+          <dd class="first-night">
+            <b>First night:</b> {character.data.nightOrder.first.description}
+          </dd>
+        )}
+        {character.data.nightOrder?.other && (
+          <dd class="other-nights">
+            <b>Other nights:</b> {character.data.nightOrder.other.description}
+          </dd>
+        )}
+      </div>
     ))
   }
 </dl>
 
 <style>
-  dd {
-    margin-block-start: 0.25rem;
+  dl {
+    --good: #4af;
+    --bad: #c67;
+    --fabled: #ff8;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
-  dd + dt {
-    margin-block-start: 0.75rem;
+  .character {
+    --card-background-color: light-dark(#f8f8f8, #111);
+    --card-background: var(--card-background-color);
+    --card-foreground-color: var(--base-foreground-color);
+    --card-border: 1px solid var(--card-foreground-color);
+
+    border: var(--card-border);
+    background: var(--card-background);
+    background-color: var(--card-background-color);
+    color: var(--card-foreground-color);
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .townsfolk,
+  .outsider {
+    --card-background-color: var(--good);
+    --card-foreground-color: #000;
+  }
+
+  .minion,
+  .demon {
+    --card-background-color: var(--bad);
+    --card-foreground-color: #000;
+  }
+
+  .traveller {
+    --card-background: linear-gradient(90deg, var(--good) 50%, var(--bad) 50%);
+    --card-foreground-color: #000;
+  }
+
+  .fabled {
+    --card-background-color: var(--fabled);
+    --card-foreground-color: #000;
+  }
+
+  dt,
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+
+  dt {
+    font-weight: bold;
+    font-size: 1.1rem;
+
+    & > a {
+      color: inherit;
+    }
   }
 
   .tag-line {

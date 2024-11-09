@@ -1,13 +1,12 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '../layouts/Base.astro'
-import CharacterList from '../components/CharacterList.astro'
+import CharactersBySet from '../components/CharactersBySet.astro'
 
 const characters = await getCollection('characters')
 ---
 
 <Layout title="Blood on the Clocktower">
   <h1>Blood on the Clocktower</h1>
-
-  <CharacterList characters={characters} />
+  <CharactersBySet characters={characters} />
 </Layout>
