@@ -15,7 +15,7 @@ function clz(character: Character): string {
 <dl>
   {
     characters.map((character) => (
-      <div class:list={['character', clz(character)]}>
+      <div class:list={['character', clz(character)]} data-id={character.slug}>
         <dt>
           <a href={`/c/${character.slug}`}>{character.data.name}</a>
         </dt>

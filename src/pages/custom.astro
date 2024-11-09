@@ -1,0 +1,138 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '../layouts/Base.astro'
+import type { CollectionEntry } from 'astro:content'
+import { determineSet } from '../lib/grouping'
+import CharacterList from '../components/CharacterList.astro'
+
+type Character = CollectionEntry<'characters'>
+type Grouped = {
+  set: string | undefined
+  characters: Character[]
+}[]
+
+const characters = await getCollection('characters')
+const grouped = group(characters)
+
+function group(characters: Character[]): Grouped {
+  const grouped: Grouped = []
+  for (const character of characters) {
+    const set = determineSet(character.id)
+    if (grouped.length === 0 || grouped[grouped.length - 1]!.set !== set) {
+      grouped.push({ set, characters: [] })
+    }
+    grouped[grouped.length - 1]!.characters.push(character)
+  }
+  return grouped
+}
+---
+
+<Layout title="Custom Script">
+  <h1>Custom Script</h1>
+
+  <div hidden id="custom-script-output">
+    <CharacterList characters={characters} />
+
+    <div class="controls">
+      <button id="reset-custom-script">Reset</button>
+    </div>
+  </div>
+
+  <form id="custom-script-form">
+    {
+      grouped.map(({ set, characters }) => (
+        <section class="menu">
+          <h2>{set ?? 'Experimental'}</h2>
+          {characters.map((character) => (
+            <div class="option" title={`(${character.data.type}) ${character.data.tagLine}`}>
+              <input type="checkbox" id={`cb:${character.slug}`} name={character.slug} />
+              <label for={`cb:${character.slug}`}>{character.data.name}</label>
+            </div>
+          ))}
+        </section>
+      ))
+    }
+
+    <div class="controls">
+      <button type="submit">Create script</button>
+    </div>
+  </form>
+</Layout>
+
+<style>
+  .menu {
+    columns: 8rem;
+    margin-block-end: 2rem;
+
+    & > h2 {
+      padding: 0;
+      margin-block: 0.5rem;
+      margin-inline: 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+      column-span: all;
+    }
+  }
+
+  .option {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    align-items: baseline;
+    padding: 0.25rem;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-block: 2rem;
+
+    & > button {
+      font-size: inherit;
+    }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('custom-script-form') as HTMLFormElement
+  const output = document.getElementById('custom-script-output') as HTMLElement
+  const reset = document.getElementById('reset-custom-script') as HTMLButtonElement
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault()
+    const data = new FormData(form)
+    form.hidden = true
+    output.hidden = false
+    for (const el of output.querySelectorAll<HTMLElement>('[data-id]')) {
+      el.style.display = 'none'
+    }
+    for (const [slug] of data.entries()) {
+      output.querySelector<HTMLElement>(`[data-id="${slug}"]`)!.style.display = ''
+    }
+  })
+
+  form.addEventListener('click', (event) => {
+    const el = event.target as HTMLElement
+    if (el.tagName === 'H2') {
+      const section = el.parentElement as HTMLElement
+      const inputs = section.querySelectorAll<HTMLInputElement>('input')
+      let allChecked = true
+      for (const input of inputs) {
+        if (!input.checked) {
+          allChecked = false
+          break
+        }
+      }
+      for (const input of inputs) {
+        input.checked = !allChecked
+      }
+    }
+  })
+
+  reset.addEventListener('click', (event) => {
+    event.preventDefault()
+    form.hidden = false
+    output.hidden = true
+  })
+</script>
