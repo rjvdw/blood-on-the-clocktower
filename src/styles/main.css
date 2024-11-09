@@ -8,6 +8,6 @@
 
 body {
   font-family: var(--base-font);
-  background-color: var(--base-background-color);
   color: var(--base-foreground-color);
+  background-color: var(--base-background-color);
 }

@@ -51,15 +51,15 @@ function clz(character: Character): string {
     --card-background: var(--card-background-color);
     --card-foreground-color: var(--base-foreground-color);
     --card-border: 1px solid var(--card-foreground-color);
-
-    border: var(--card-border);
-    background: var(--card-background);
-    background-color: var(--card-background-color);
-    color: var(--card-foreground-color);
-    padding: 0.75rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    padding: 0.75rem;
+    color: var(--card-foreground-color);
+    background: var(--card-background);
+    background-color: var(--card-background-color);
+
+    border: var(--card-border);
   }
 
   .townsfolk,
@@ -86,13 +86,13 @@ function clz(character: Character): string {
 
   dt,
   dd {
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
   dt {
-    font-weight: bold;
     font-size: 1.1rem;
+    font-weight: bold;
 
     & > a {
       color: inherit;

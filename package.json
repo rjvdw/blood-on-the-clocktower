@@ -9,10 +9,12 @@
     "preview": "astro preview",
     "astro": "astro",
     "prepare": "husky",
-    "check": "npm run check:astro && npm run check:prettier",
+    "check": "npm run check:astro && npm run check:stylelint && npm run check:prettier",
     "check:astro": "astro check",
+    "check:stylelint": "stylelint --allow-empty-input -f verbose 'src/**/*.{css,astro}'",
     "check:prettier": "prettier --check .",
-    "fix": "npm run fix:prettier",
+    "fix": "npm run fix:stylelint && npm run fix:prettier",
+    "fix:stylelint": "npm run check:stylelint -- --fix",
     "fix:prettier": "prettier --write ."
   },
   "dependencies": {
@@ -23,6 +25,9 @@
   },
   "devDependencies": {
     "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier-plugin-astro": "^0.14.1",
+    "stylelint": "^16.10.0",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-recess-order": "^5.1.1"
   }
 }
