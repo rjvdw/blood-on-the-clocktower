@@ -50,7 +50,12 @@ function group(characters: Character[]): Grouped {
           <h2>{set ?? 'Experimental'}</h2>
           {characters.map((character) => (
             <div class="option" title={`(${character.data.type}) ${character.data.tagLine}`}>
-              <input type="checkbox" id={`cb:${character.slug}`} name={getBotcId(character)} />
+              <input
+                type="checkbox"
+                id={`cb:${character.slug}`}
+                name={getBotcId(character)}
+                data-type={character.data.type}
+              />
               <label for={`cb:${character.slug}`}>{character.data.name}</label>
             </div>
           ))}
@@ -61,6 +66,17 @@ function group(characters: Character[]): Grouped {
     <div class="form-controls">
       <button type="submit">Create script</button>
     </div>
+
+    <table class="counts">
+      <thead>
+        <tr>
+          <td></td>
+          <th>Active</th>
+          <th>Max</th>
+        </tr>
+      </thead>
+      <tbody id="counts"></tbody>
+    </table>
   </form>
 </Layout>
 
@@ -86,16 +102,58 @@ function group(characters: Character[]): Grouped {
     align-items: baseline;
     padding: 0.25rem;
   }
+
+  .counts {
+    & > thead th {
+      text-align: end;
+    }
+
+    & > tbody {
+      & :global(th) {
+        font-weight: normal;
+        text-align: start;
+      }
+
+      & :global(td) {
+        min-inline-size: 4rem;
+        text-align: end;
+      }
+    }
+  }
 </style>
 
 <script>
+  import type { CollectionEntry } from 'astro:content'
+
+  type Character = CollectionEntry<'characters'>
+  type CharacterType = Character['data']['type']
+  type Counts = { [key in CharacterType]: number }
+
   const form = document.getElementById('custom-script-form') as HTMLFormElement
   const output = document.getElementById('custom-script-output') as HTMLElement
   const resetButton = document.getElementById('reset-custom-script') as HTMLButtonElement
+  const countsOutput = document.getElementById('counts') as HTMLTableElement
+  const counts: Counts = {
+    Townsfolk: 0,
+    Outsider: 0,
+    Minion: 0,
+    Demon: 0,
+    Fabled: 0,
+    Traveller: 0,
+  }
+  const maxCounts: Counts = {
+    Townsfolk: 13,
+    Outsider: 4,
+    Minion: 4,
+    Demon: 4,
+    Fabled: 5,
+    Traveller: 5,
+  }
 
   // initialize the page and update everytime the popstate event occurs
   init(true)
   addEventListener('popstate', () => init())
+  updateCounts()
 
   // when the form is submitted, get the IDs and navigate to the overview
   form.addEventListener('submit', (event) => {
@@ -107,6 +165,9 @@ function group(characters: Character[]): Grouped {
       load(ids)
     }
   })
+
+  // whenever something changes, update the counts
+  form.addEventListener('change', () => updateCounts())
 
   // when a header is clicked, (de)select all options in this menu
   form.addEventListener('click', (event) => {
@@ -124,6 +185,7 @@ function group(characters: Character[]): Grouped {
       for (const input of inputs) {
         input.checked = !allChecked
       }
+      updateCounts()
     }
   })
 
@@ -147,13 +209,65 @@ function group(characters: Character[]): Grouped {
       load(ids)
 
       if (initCheckboxes) {
-        for (const cb of form.querySelectorAll<HTMLInputElement>('.option > input')) {
+        for (const cb of getCheckboxes()) {
           cb.checked = ids.indexOf(cb.name) !== -1
         }
       }
     } else {
       reset()
     }
+  }
+
+  function updateCounts() {
+    counts.Townsfolk = 0
+    counts.Outsider = 0
+    counts.Minion = 0
+    counts.Demon = 0
+    counts.Traveller = 0
+    counts.Fabled = 0
+
+    for (const cb of getCheckboxes()) {
+      if (cb.checked) {
+        counts[cb.dataset.type as CharacterType] += 1
+      }
+    }
+
+    countsOutput.innerHTML = `
+      <tr>
+        <th>Townsfolk</th>
+        <td>${counts.Townsfolk}</td>
+        <td>${maxCounts.Townsfolk}</td>
+      </tr>
+      <tr>
+        <th>Outsiders</th>
+        <td>${counts.Outsider}</td>
+        <td>${maxCounts.Outsider}</td>
+      </tr>
+      <tr>
+        <th>Minions</th>
+        <td>${counts.Minion}</td>
+        <td>${maxCounts.Minion}</td>
+      </tr>
+      <tr>
+        <th>Demons</th>
+        <td>${counts.Demon}</td>
+        <td>${maxCounts.Demon}</td>
+      </tr>
+      <tr>
+        <th>Travellers</th>
+        <td>${counts.Traveller}</td>
+        <td>${maxCounts.Traveller}</td>
+      </tr>
+      <tr>
+        <th>Fabled</th>
+        <td>${counts.Fabled}</td>
+        <td>${maxCounts.Fabled}</td>
+      </tr>
+    `
+  }
+
+  function getCheckboxes() {
+    return form.querySelectorAll<HTMLInputElement>('.option > input')
   }
 
   /**
