@@ -97,21 +97,24 @@ function group(characters: Character[]): Grouped {
 <script>
   const form = document.getElementById('custom-script-form') as HTMLFormElement
   const output = document.getElementById('custom-script-output') as HTMLElement
-  const reset = document.getElementById('reset-custom-script') as HTMLButtonElement
+  const resetButton = document.getElementById('reset-custom-script') as HTMLButtonElement
 
+  // initialize the page and update everytime the popstate event occurs
+  init(true)
+  addEventListener('popstate', () => init())
+
+  // when the form is submitted, get the slugs and navigate to the overview
   form.addEventListener('submit', (event) => {
     event.preventDefault()
     const data = new FormData(form)
-    form.hidden = true
-    output.hidden = false
-    for (const el of output.querySelectorAll<HTMLElement>('[data-id]')) {
-      el.style.display = 'none'
-    }
-    for (const [slug] of data.entries()) {
-      output.querySelector<HTMLElement>(`[data-id="${slug}"]`)!.style.display = ''
+    const slugs = Array.from(data.entries().map(([slug]) => slug))
+    if (slugs.length > 0) {
+      nav(slugs)
+      load(slugs)
     }
   })
 
+  // when a header is clicked, (de)select all options in this menu
   form.addEventListener('click', (event) => {
     const el = event.target as HTMLElement
     if (el.tagName === 'H2') {
@@ -130,9 +133,71 @@ function group(characters: Character[]): Grouped {
     }
   })
 
-  reset.addEventListener('click', (event) => {
+  // when the reset button is clicked, go back to the form view
+  resetButton.addEventListener('click', (event) => {
     event.preventDefault()
+    nav()
+    reset()
+  })
+
+  /**
+   * Initialize the page
+   *
+   * @param initCheckboxes On the initial page load, also set all checkboxes to the correct state
+   */
+  function init(initCheckboxes = false) {
+    const script = new URLSearchParams(window.location.search).get('script')
+
+    if (script) {
+      const slugs = script.split(',')
+      load(slugs)
+
+      if (initCheckboxes) {
+        for (const cb of form.querySelectorAll<HTMLInputElement>('.option > input')) {
+          cb.checked = slugs.indexOf(cb.name) !== -1
+        }
+      }
+    } else {
+      reset()
+    }
+  }
+
+  /**
+   * Navigate to the form view
+   */
+  function nav(): void
+  /**
+   * Navigate to the overview with the selected slugs
+   */
+  function nav(slugs: string[]): void
+  function nav(slugs?: string[]) {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (slugs === undefined) {
+      history.pushState({}, '', '/custom')
+    } else {
+      history.pushState({}, '', '/custom?script=' + slugs.join(','))
+    }
+  }
+
+  /**
+   * Load the overview with the selected slugs
+   */
+  function load(slugs: string[]) {
+    form.hidden = true
+    output.hidden = false
+    for (const el of output.querySelectorAll<HTMLElement>('[data-id]')) {
+      el.style.display = 'none'
+    }
+    for (const slug of slugs) {
+      output.querySelector<HTMLElement>(`[data-id="${slug}"]`)!.style.display = ''
+    }
+  }
+
+  /**
+   * Load the form view
+   */
+  function reset() {
     form.hidden = false
     output.hidden = true
-  })
+  }
 </script>
