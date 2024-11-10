@@ -7,6 +7,7 @@ const nightSchema = z.object({
 
 export default z.object({
   name: z.string(),
+  botcId: z.string().optional(),
   source: z.string().url(),
   type: z.enum(['Townsfolk', 'Outsider', 'Minion', 'Demon', 'Fabled', 'Traveller']),
   game: z.string().optional(),

@@ -2,7 +2,11 @@
   --base-background-color: light-dark(#eee, #333);
   --base-foreground-color: light-dark(#111, #ddd);
   --base-font: sans-serif;
+
   --page-max-inline-size: 45rem;
+
+  --error-foreground-color: light-dark(#a66, #fcc);
+
   color-scheme: dark light;
 }
 
@@ -10,4 +14,21 @@ body {
   font-family: var(--base-font);
   color: var(--base-foreground-color);
   background-color: var(--base-background-color);
+}
+
+.error-message {
+  color: var(--error-foreground-color);
+}
+
+.form-controls {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-block: 2rem;
+}
+
+select,
+input,
+button {
+  font-size: inherit;
 }

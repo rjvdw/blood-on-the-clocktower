@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import { getBotcId } from '../lib/botc-com'
 
 type Character = CollectionEntry<'characters'>
 export type Props = {
@@ -7,6 +8,7 @@ export type Props = {
 }
 
 const { characters } = Astro.props
+
 function clz(character: Character): string {
   return character.data.type.toLocaleLowerCase()
 }
@@ -15,7 +17,7 @@ function clz(character: Character): string {
 <dl>
   {
     characters.map((character) => (
-      <div class:list={['character', clz(character)]} data-id={character.slug}>
+      <div class:list={['character', clz(character)]} data-botc-id={getBotcId(character)}>
         <dt>
           <a href={`/c/${character.slug}`}>{character.data.name}</a>
         </dt>

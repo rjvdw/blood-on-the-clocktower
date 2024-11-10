@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Base.astro'
+---
+
+<Layout title="Custom Script">
+  <h1>Custom Script</h1>
+  <form method="get" action="/custom" id="load-file">
+    <input type="hidden" name="script" id="load-file:script" />
+
+    <p class="error-message" hidden id="load-file:error-message"></p>
+
+    <div>
+      <label for="load-file:file">JSON file:</label>
+      <input id="load-file:file" type="file" accept="application/json" required />
+    </div>
+
+    <div class="form-controls">
+      <button type="submit">Load file</button>
+    </div>
+  </form>
+</Layout>
+
+<script>
+  const form = document.getElementById('load-file') as HTMLFormElement
+  const fileField = document.getElementById('load-file:file') as HTMLInputElement
+  const scriptField = document.getElementById('load-file:script') as HTMLInputElement
+  const errorMessage = document.getElementById('load-file:error-message') as HTMLElement
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault()
+    hideError()
+
+    const file = fileField.files?.[0]
+    if (file) {
+      const reader = new FileReader()
+      reader.addEventListener('load', () => {
+        try {
+          const [_meta, ...slugs] = JSON.parse(reader.result as string)
+          scriptField.value = slugs.join(' ')
+          form.submit()
+        } catch (err) {
+          showError(err)
+        }
+      })
+      reader.addEventListener('error', () => {
+        showError()
+      })
+      reader.readAsText(file, 'utf-8')
+    } else {
+      showError('no file selected')
+    }
+  })
+
+  function showError(): void
+  function showError(msg: string): void
+  function showError(err: unknown): void
+  function showError(arg?: unknown) {
+    const msg = arg === undefined ? undefined : typeof arg === 'string' ? arg : String(arg)
+    errorMessage.hidden = false
+    errorMessage.innerHTML = msg ?? 'Unknown error'
+  }
+
+  function hideError() {
+    errorMessage.hidden = true
+    errorMessage.innerHTML = ''
+  }
+</script>
