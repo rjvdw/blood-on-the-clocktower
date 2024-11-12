@@ -26,13 +26,21 @@ function group(characters: Character[]): Grouped {
   }
   return grouped
 }
+
+function sortByType(characters: Character[]): Character[] {
+  let sorted: Character[] = []
+  for (const type of ['Townsfolk', 'Outsider', 'Minion', 'Demon', 'Traveller', 'Fabled']) {
+    sorted = sorted.concat(characters.filter((ch) => ch.data.type === type))
+  }
+  return sorted
+}
 ---
 
 <Layout title="Custom Script">
   <h1>Custom Script</h1>
 
   <div hidden id="custom-script-output">
-    <CharacterList characters={characters} />
+    <CharacterList characters={sortByType(characters)} />
 
     <div class="controls">
       <button id="reset-custom-script">Reset</button>
