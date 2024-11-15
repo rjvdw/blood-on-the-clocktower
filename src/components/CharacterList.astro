@@ -17,7 +17,12 @@ function clz(character: Character): string {
 <dl>
   {
     characters.map((character) => (
-      <div class:list={['character', clz(character)]} data-botc-id={getBotcId(character)}>
+      <div
+        class:list={['character', clz(character)]}
+        data-botc-id={getBotcId(character)}
+        data-name={character.data.name}
+        data-type={character.data.type}
+      >
         <dt>
           <a href={`/c/${character.slug}`}>{character.data.name}</a>
         </dt>
@@ -60,8 +65,11 @@ function clz(character: Character): string {
     color: var(--card-foreground-color);
     background: var(--card-background);
     background-color: var(--card-background-color);
-
     border: var(--card-border);
+
+    &[hidden] {
+      display: none;
+    }
   }
 
   .townsfolk,

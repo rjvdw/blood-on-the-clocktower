@@ -1,0 +1,105 @@
+---
+
+---
+
+<form id="filter:form">
+  <fieldset>
+    <legend>Filter</legend>
+
+    <label for="filter:name">Name</label>
+    <input type="text" id="filter:name" />
+
+    <label for="filter:townsfolk">Townsfolk</label>
+    <input type="checkbox" id="filter:townsfolk" checked />
+
+    <label for="filter:outsider">Outsider</label>
+    <input type="checkbox" id="filter:outsider" checked />
+
+    <label for="filter:minion">Minion</label>
+    <input type="checkbox" id="filter:minion" checked />
+
+    <label for="filter:demon">Demon</label>
+    <input type="checkbox" id="filter:demon" checked />
+
+    <label for="filter:traveller">Traveller</label>
+    <input type="checkbox" id="filter:traveller" checked />
+
+    <label for="filter:fabled">Fabled</label>
+    <input type="checkbox" id="filter:fabled" checked />
+
+    <div class="form-controls">
+      <button type="reset">Reset</button>
+    </div>
+  </fieldset>
+</form>
+
+<style>
+  fieldset {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    row-gap: 0.5rem;
+    column-gap: 1rem;
+    align-items: center;
+    justify-items: start;
+  }
+
+  .form-controls {
+    grid-column: span 2;
+    margin-block: 1rem 0;
+  }
+</style>
+
+<script>
+  import type { CollectionEntry } from 'astro:content'
+
+  type CharacterElement = HTMLElement & {
+    dataset: {
+      name: string
+      type: CollectionEntry<'characters'>['data']['type']
+    }
+  }
+
+  const form = document.getElementById('filter:form') as HTMLFormElement
+  const nameFilter = getInput('filter:name')
+  const townsfolkFilter = getCheckbox('filter:townsfolk')
+  const outsiderFilter = getCheckbox('filter:outsider')
+  const minionFilter = getCheckbox('filter:minion')
+  const demonFilter = getCheckbox('filter:demon')
+  const travellerFilter = getCheckbox('filter:traveller')
+  const fabledFilter = getCheckbox('filter:fabled')
+
+  form.addEventListener('reset', () => {
+    form.reset()
+    setTimeout(update, 1)
+  })
+
+  addEventListener('load', update)
+
+  function getInput(id: string): HTMLInputElement {
+    const input = document.getElementById(id) as HTMLInputElement
+    input.addEventListener('input', update)
+    return input
+  }
+
+  function getCheckbox(id: string): HTMLInputElement {
+    const input = document.getElementById(id) as HTMLInputElement
+    input.addEventListener('change', update)
+    return input
+  }
+
+  function update() {
+    const nameValue = nameFilter.value.toLocaleLowerCase()
+    const hidden = ({ name, type }: CharacterElement['dataset']) =>
+      name.toLocaleLowerCase().indexOf(nameValue) === -1 ||
+      (type === 'Townsfolk' && !townsfolkFilter.checked) ||
+      (type === 'Outsider' && !outsiderFilter.checked) ||
+      (type === 'Minion' && !minionFilter.checked) ||
+      (type === 'Demon' && !demonFilter.checked) ||
+      (type === 'Traveller' && !travellerFilter.checked) ||
+      (type === 'Fabled' && !fabledFilter.checked)
+
+    document.querySelectorAll<CharacterElement>('.character').forEach((ch) => {
+      ch.hidden = hidden(ch.dataset)
+    })
+  }
+</script>

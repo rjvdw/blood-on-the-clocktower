@@ -2,11 +2,13 @@
 import { getCollection } from 'astro:content'
 import Layout from '../layouts/Base.astro'
 import CharactersBySet from '../components/CharactersBySet.astro'
+import Filter from '../components/Filter.astro'
 
 const characters = await getCollection('characters')
 ---
 
 <Layout title="Blood on the Clocktower">
   <h1>Blood on the Clocktower</h1>
+  <Filter />
   <CharactersBySet characters={characters} />
 </Layout>

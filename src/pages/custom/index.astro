@@ -5,6 +5,7 @@ import type { CollectionEntry } from 'astro:content'
 import { determineSet } from '../../lib/grouping'
 import CharacterList from '../../components/CharacterList.astro'
 import { getBotcId } from '../../lib/botc-com'
+import Filter from '../../components/Filter.astro'
 
 type Character = CollectionEntry<'characters'>
 type Grouped = {
@@ -40,6 +41,7 @@ function sortByType(characters: Character[]): Character[] {
   <h1>Custom Script</h1>
 
   <div hidden id="custom-script-output">
+    <Filter />
     <CharacterList characters={sortByType(characters)} />
 
     <div class="controls">
