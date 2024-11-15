@@ -5,6 +5,8 @@ const nightSchema = z.object({
   description: z.string(),
 })
 
+export type NightSchemaType = z.infer<typeof nightSchema>
+
 export default z.object({
   name: z.string(),
   botcId: z.string().optional(),

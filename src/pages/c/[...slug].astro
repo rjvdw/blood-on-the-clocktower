@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '../../layouts/Base.astro'
+import NightOrder from '../../components/NightOrder.astro'
 
 export async function getStaticPaths() {
   const characters = await getCollection('characters')
@@ -20,20 +21,7 @@ const { Content } = await character.render()
     <p class="tag-line">{character.data.tagLine}</p>
   </header>
   <Content />
-  {
-    character.data.nightOrder?.first && (
-      <p class="first-night" data-order={character.data.nightOrder.first.order}>
-        <b>First night:</b> {character.data.nightOrder.first.description}
-      </p>
-    )
-  }
-  {
-    character.data.nightOrder?.other && (
-      <p class="other-nights" data-order={character.data.nightOrder.other.order}>
-        <b>Other nights:</b> {character.data.nightOrder.other.description}
-      </p>
-    )
-  }
+  <NightOrder character={character} />
   <footer>
     <p>
       <a href={character.data.source} target="_blank">Source</a>

@@ -1,0 +1,66 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import type { NightSchemaType } from '../content/schema/character'
+
+type Character = CollectionEntry<'characters'>
+type NightOrder = Character['data']['nightOrder']
+type FirstNightCharacter = Character & {
+  data: {
+    nightOrder: {
+      first: NightSchemaType
+    }
+  }
+}
+type OtherNightsCharacter = Character & {
+  data: {
+    nightOrder: {
+      other: NightSchemaType
+    }
+  }
+}
+type EachNightCharacter = FirstNightCharacter & OtherNightsCharacter
+
+export type Props = {
+  character: Character
+}
+
+const { character } = Astro.props
+
+function eachNight(character: Character): character is EachNightCharacter {
+  if (!character.data.nightOrder) return false
+  if (!character.data.nightOrder.first) return false
+  if (!character.data.nightOrder.other) return false
+  return character.data.nightOrder.first.description === character.data.nightOrder.other.description
+}
+
+function firstNight(character: Character): character is FirstNightCharacter {
+  return !eachNight(character) && Boolean(character.data.nightOrder?.first)
+}
+
+function otherNights(character: Character): character is OtherNightsCharacter {
+  return !eachNight(character) && Boolean(character.data.nightOrder?.other)
+}
+---
+
+{
+  eachNight(character) && (
+    <p class="night-order each-night">
+      <b>Each night:</b> {' ' + character.data.nightOrder.first.description}
+    </p>
+  )
+}
+{
+  firstNight(character) && (
+    <p class="night-order first-night">
+      <b>First night:</b> {' ' + character.data.nightOrder.first.description}
+    </p>
+  )
+}
+{
+  otherNights(character) && (
+    <p class="night-order other-nights">
+      <b>{firstNight(character) ? 'Other nights' : 'Each night except for the first'}:</b>
+      {' ' + character.data.nightOrder.other.description}
+    </p>
+  )
+}
