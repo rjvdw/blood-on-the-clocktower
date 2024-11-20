@@ -68,6 +68,10 @@
   const travellerFilter = getCheckbox('filter:traveller')
   const fabledFilter = getCheckbox('filter:fabled')
 
+  form.addEventListener('submit', (event) => {
+    event.preventDefault()
+  })
+
   form.addEventListener('reset', () => {
     form.reset()
     setTimeout(update, 1)
