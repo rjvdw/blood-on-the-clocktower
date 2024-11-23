@@ -22,11 +22,19 @@ const { Content } = await character.render()
   </header>
   <Content />
   <NightOrder character={character} />
-  <footer>
-    <p>
-      <a href={character.data.source} target="_blank">Source</a>
-    </p>
-  </footer>
+  {
+    character.data.source ? (
+      <footer>
+        <p>
+          <a href={character.data.source} target="_blank">
+            Source
+          </a>
+        </p>
+      </footer>
+    ) : (
+      ''
+    )
+  }
 </Layout>
 
 <style>
