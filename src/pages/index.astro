@@ -4,7 +4,7 @@ import Layout from '../layouts/Base.astro'
 import CharactersBySet from '../components/CharactersBySet.astro'
 import Filter from '../components/Filter.astro'
 
-const characters = await getCollection('characters')
+const characters = await getCollection('characters', (character) => !character.data.homebrew)
 ---
 
 <Layout title="Blood on the Clocktower">

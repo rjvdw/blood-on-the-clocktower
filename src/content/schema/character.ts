@@ -13,6 +13,7 @@ export default z.object({
   source: z.string().url(),
   type: z.enum(['Townsfolk', 'Outsider', 'Minion', 'Demon', 'Fabled', 'Traveller']),
   game: z.string().optional(),
+  homebrew: z.boolean().default(false),
   tagLine: z.string(),
   nightOrder: z
     .object({

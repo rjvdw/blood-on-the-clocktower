@@ -13,7 +13,7 @@ type Grouped = {
   characters: Character[]
 }[]
 
-const characters = await getCollection('characters')
+const characters = await getCollection('characters', (character) => !character.data.homebrew)
 const grouped = group(characters)
 
 function group(characters: Character[]): Grouped {
