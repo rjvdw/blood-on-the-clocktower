@@ -1,6 +1,6 @@
 ---
 name: Daddy Ben
-slug: nrb-homebrwe/daddy-ben
+slug: nrb-homebrew/daddy-ben
 source: https://imgur.com/a/if-youre-sullivan-then-who-am-i-nrb-homebrew-script-Cc4elqZ
 type: Minion
 game: If You're Sullivan Then Who Am I?

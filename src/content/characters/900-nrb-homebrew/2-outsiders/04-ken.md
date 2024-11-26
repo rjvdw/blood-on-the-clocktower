@@ -1,6 +1,6 @@
 ---
 name: Ken
-slug: nrb-homebrwe/ken
+slug: nrb-homebrew/ken
 source: https://imgur.com/a/if-youre-sullivan-then-who-am-i-nrb-homebrew-script-Cc4elqZ
 type: Outsider
 game: If You're Sullivan Then Who Am I?
