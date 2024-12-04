@@ -1,6 +1,5 @@
 ---
 name: Harlot
-slug: harlot
 source: https://wiki.bloodontheclocktower.com/Harlot
 type: Traveller
 game: Sects & Violets

@@ -1,6 +1,6 @@
 ---
 name: Cannibal
-slug: cannibal
+id: cannibal
 source: https://wiki.bloodontheclocktower.com/Cannibal
 type: Townsfolk
 tagLine:

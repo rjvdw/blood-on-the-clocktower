@@ -1,6 +1,5 @@
 ---
 name: Gambler
-slug: gambler
 source: https://wiki.bloodontheclocktower.com/Gambler
 type: Townsfolk
 game: Bad Moon Rising

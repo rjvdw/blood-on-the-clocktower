@@ -1,6 +1,5 @@
 ---
 name: Artist
-slug: artist
 source: https://wiki.bloodontheclocktower.com/Artist
 type: Townsfolk
 game: Sects & Violets

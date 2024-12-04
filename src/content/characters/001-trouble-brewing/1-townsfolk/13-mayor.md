@@ -1,6 +1,5 @@
 ---
 name: Mayor
-slug: mayor
 source: https://wiki.bloodontheclocktower.com/Mayor
 type: Townsfolk
 game: Trouble Brewing

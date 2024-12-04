@@ -1,6 +1,5 @@
 ---
 name: Pukka
-slug: pukka
 source: https://wiki.bloodontheclocktower.com/Pukka
 type: Demon
 game: Bad Moon Rising

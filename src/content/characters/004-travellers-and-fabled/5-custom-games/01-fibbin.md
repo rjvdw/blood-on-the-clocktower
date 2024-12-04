@@ -1,6 +1,5 @@
 ---
 name: Fibbin
-slug: fibbin
 source: https://wiki.bloodontheclocktower.com/Fibbin
 type: Fabled
 game: Custom Game

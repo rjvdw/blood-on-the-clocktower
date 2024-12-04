@@ -1,6 +1,5 @@
 ---
 name: Mastermind
-slug: mastermind
 source: https://wiki.bloodontheclocktower.com/Mastermind
 type: Minion
 game: Bad Moon Rising

@@ -1,6 +1,5 @@
 ---
 name: Deviant
-slug: deviant
 source: https://wiki.bloodontheclocktower.com/Deviant
 type: Traveller
 game: Sects & Violets

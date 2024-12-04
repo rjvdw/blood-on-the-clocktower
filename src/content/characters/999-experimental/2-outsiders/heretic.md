@@ -1,6 +1,6 @@
 ---
 name: Heretic
-slug: heretic
+id: heretic
 source: https://wiki.bloodontheclocktower.com/Heretic
 type: Outsider
 tagLine:

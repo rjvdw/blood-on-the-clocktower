@@ -1,6 +1,6 @@
 ---
 name: Hatter
-slug: hatter
+id: hatter
 source: https://wiki.bloodontheclocktower.com/Hatter
 type: Outsider
 tagLine:

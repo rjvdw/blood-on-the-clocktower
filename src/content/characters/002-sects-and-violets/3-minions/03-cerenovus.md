@@ -1,6 +1,5 @@
 ---
 name: Cerenovus
-slug: cerenovus
 source: https://wiki.bloodontheclocktower.com/Cerenovus
 type: Minion
 game: Sects & Violets

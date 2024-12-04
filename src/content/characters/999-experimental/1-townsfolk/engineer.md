@@ -1,6 +1,6 @@
 ---
 name: Engineer
-slug: engineer
+id: engineer
 source: https://wiki.bloodontheclocktower.com/Engineer
 type: Townsfolk
 tagLine:

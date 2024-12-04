@@ -1,6 +1,5 @@
 ---
 name: Seamstress
-slug: seamstress
 source: https://wiki.bloodontheclocktower.com/Seamstress
 type: Townsfolk
 game: Sects & Violets

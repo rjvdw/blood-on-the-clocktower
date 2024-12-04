@@ -1,6 +1,6 @@
 ---
 name: Ojo
-slug: ojo
+id: ojo
 source: https://wiki.bloodontheclocktower.com/Ojo
 type: Demon
 tagLine: >-

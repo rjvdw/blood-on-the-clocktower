@@ -1,6 +1,5 @@
 ---
 name: Beggar
-slug: beggar
 source: https://wiki.bloodontheclocktower.com/Beggar
 type: Traveller
 game: Trouble Brewing

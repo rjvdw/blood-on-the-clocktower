@@ -1,6 +1,5 @@
 ---
 name: Mathematician
-slug: mathematician
 source: https://wiki.bloodontheclocktower.com/Mathematician
 type: Townsfolk
 game: Sects & Violets

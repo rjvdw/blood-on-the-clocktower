@@ -1,6 +1,5 @@
 ---
 name: Djinn
-slug: djinn
 source: https://wiki.bloodontheclocktower.com/Djinn
 type: Fabled
 game: Custom Game

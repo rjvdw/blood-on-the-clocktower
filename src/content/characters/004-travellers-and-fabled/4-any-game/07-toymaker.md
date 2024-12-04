@@ -1,6 +1,5 @@
 ---
 name: Toymaker
-slug: toymaker
 source: https://wiki.bloodontheclocktower.com/Toymaker
 type: Fabled
 game: Any Game

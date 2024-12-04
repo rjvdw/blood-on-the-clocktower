@@ -1,6 +1,6 @@
 ---
 name: Atheist
-slug: atheist
+id: atheist
 source: https://wiki.bloodontheclocktower.com/Atheist
 type: Townsfolk
 tagLine:

@@ -1,6 +1,6 @@
 ---
 name: Banshee
-slug: banshee
+id: banshee
 source: https://wiki.bloodontheclocktower.com/Banshee
 type: Townsfolk
 tagLine:

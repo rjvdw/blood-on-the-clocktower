@@ -1,6 +1,6 @@
 ---
 name: Politician
-slug: politician
+id: politician
 source: https://wiki.bloodontheclocktower.com/Politician
 type: Outsider
 tagLine:

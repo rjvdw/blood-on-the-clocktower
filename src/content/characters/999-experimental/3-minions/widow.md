@@ -1,6 +1,6 @@
 ---
 name: Widow
-slug: widow
+id: widow
 source: https://wiki.bloodontheclocktower.com/Widow
 type: Minion
 tagLine: >-

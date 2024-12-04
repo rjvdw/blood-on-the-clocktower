@@ -1,6 +1,6 @@
 ---
 name: General
-slug: general
+id: general
 source: https://wiki.bloodontheclocktower.com/General
 type: Townsfolk
 tagLine: >-

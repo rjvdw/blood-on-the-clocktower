@@ -1,6 +1,5 @@
 ---
 name: Flowergirl
-slug: flowergirl
 source: https://wiki.bloodontheclocktower.com/Flowergirl
 type: Townsfolk
 game: Sects & Violets

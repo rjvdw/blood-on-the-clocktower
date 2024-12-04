@@ -1,6 +1,6 @@
 ---
 name: King
-slug: king
+id: king
 source: https://wiki.bloodontheclocktower.com/King
 type: Townsfolk
 tagLine:

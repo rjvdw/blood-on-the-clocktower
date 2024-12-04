@@ -1,6 +1,5 @@
 ---
 name: Gunslinger
-slug: gunslinger
 source: https://wiki.bloodontheclocktower.com/Gunslinger
 type: Traveller
 game: Trouble Brewing

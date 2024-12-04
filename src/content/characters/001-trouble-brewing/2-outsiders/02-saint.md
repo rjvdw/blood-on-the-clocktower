@@ -1,6 +1,5 @@
 ---
 name: Saint
-slug: saint
 source: https://wiki.bloodontheclocktower.com/Saint
 type: Outsider
 game: Trouble Brewing

@@ -1,6 +1,5 @@
 ---
 name: Butcher
-slug: butcher
 source: https://wiki.bloodontheclocktower.com/Butcher
 type: Traveller
 game: Sects & Violets

@@ -1,9 +1,7 @@
 ---
-import type { CollectionEntry } from 'astro:content'
+import type { CharacterType, Character } from '../lib/characters'
 import CharacterList from './CharacterList.astro'
 
-type Character = CollectionEntry<'characters'>
-type CharacterType = Character['data']['type']
 type Grouped = { type: CharacterType; characters: Character[] }[]
 
 export type Props = {

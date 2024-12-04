@@ -1,6 +1,6 @@
 ---
 name: Leviathan
-slug: leviathan
+id: leviathan
 source: https://wiki.bloodontheclocktower.com/Leviathan
 type: Demon
 tagLine:

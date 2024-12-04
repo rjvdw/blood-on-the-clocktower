@@ -1,9 +1,8 @@
 ---
-import type { CollectionEntry } from 'astro:content'
 import CharactersByType from './CharactersByType.astro'
 import { determineSet } from '../lib/grouping'
+import type { Character } from '../lib/characters'
 
-type Character = CollectionEntry<'characters'>
 type Grouped = { set: string | undefined; characters: Character[] }[]
 
 export type Props = {
@@ -16,7 +15,7 @@ const charactersBySet = groupBySet(characters)
 function groupBySet(characters: Character[]): Grouped {
   const grouped: Grouped = []
   for (const character of characters) {
-    const set = determineSet(character.id)
+    const set = determineSet(character)
     if (grouped.length === 0 || grouped[grouped.length - 1]!.set !== set) {
       grouped.push({ set, characters: [] })
     }

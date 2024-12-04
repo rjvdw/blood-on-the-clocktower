@@ -1,6 +1,5 @@
 ---
 name: Sentinel
-slug: sentinel
 source: https://wiki.bloodontheclocktower.com/Sentinel
 type: Fabled
 game: Custom Game

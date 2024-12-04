@@ -1,6 +1,5 @@
 ---
 name: Lunatic
-slug: lunatic
 source: https://wiki.bloodontheclocktower.com/Lunatic
 type: Outsider
 game: Bad Moon Rising

@@ -1,6 +1,6 @@
 ---
 name: Knight
-slug: knight
+id: knight
 source: https://wiki.bloodontheclocktower.com/Knight
 type: Townsfolk
 tagLine: You start knowing 2 players that are not the Demon.

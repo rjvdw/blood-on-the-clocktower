@@ -1,6 +1,5 @@
 ---
 name: Scarlet Woman
-slug: scarlet-woman
 source: https://wiki.bloodontheclocktower.com/Scarlet_Woman
 type: Minion
 game: Trouble Brewing

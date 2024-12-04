@@ -1,6 +1,6 @@
 ---
 name: Kazali
-slug: kazali
+id: kazali
 source: https://wiki.bloodontheclocktower.com/Kazali
 type: Demon
 tagLine: >-

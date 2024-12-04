@@ -1,6 +1,6 @@
 ---
 name: Boffin
-slug: boffin
+id: boffin
 source: https://wiki.bloodontheclocktower.com/Boffin
 type: Minion
 tagLine:

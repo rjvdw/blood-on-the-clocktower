@@ -1,6 +1,5 @@
 ---
 name: Fool
-slug: fool
 source: https://wiki.bloodontheclocktower.com/Fool
 type: Townsfolk
 game: Bad Moon Rising

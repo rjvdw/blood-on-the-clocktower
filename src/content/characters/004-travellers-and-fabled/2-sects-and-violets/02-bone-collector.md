@@ -1,6 +1,5 @@
 ---
 name: Bone Collector
-slug: bone-collector
 source: https://wiki.bloodontheclocktower.com/Bone_Collector
 type: Traveller
 game: Sects & Violets

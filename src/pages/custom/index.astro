@@ -1,25 +1,23 @@
 ---
-import { getCollection } from 'astro:content'
 import Layout from '../../layouts/Base.astro'
-import type { CollectionEntry } from 'astro:content'
 import { determineSet } from '../../lib/grouping'
 import CharacterList from '../../components/CharacterList.astro'
 import { getBotcId } from '../../lib/botc-com'
 import Filter from '../../components/Filter.astro'
+import { getCharacters, type Character } from '../../lib/characters'
 
-type Character = CollectionEntry<'characters'>
 type Grouped = {
   set: string | undefined
   characters: Character[]
 }[]
 
-const characters = await getCollection('characters', (character) => !character.data.homebrew)
+const characters = await getCharacters((character) => !character.data.homebrew)
 const grouped = group(characters)
 
 function group(characters: Character[]): Grouped {
   const grouped: Grouped = []
   for (const character of characters) {
-    const set = determineSet(character.id)
+    const set = determineSet(character)
     if (grouped.length === 0 || grouped[grouped.length - 1]!.set !== set) {
       grouped.push({ set, characters: [] })
     }
@@ -62,11 +60,11 @@ function sortByType(characters: Character[]): Character[] {
             <div class="option" title={`(${character.data.type}) ${character.data.tagLine}`}>
               <input
                 type="checkbox"
-                id={`cb:${character.slug}`}
+                id={`cb:${character.id}`}
                 name={getBotcId(character)}
                 data-type={character.data.type}
               />
-              <label for={`cb:${character.slug}`}>{character.data.name}</label>
+              <label for={`cb:${character.id}`}>{character.data.name}</label>
             </div>
           ))}
         </section>
@@ -133,10 +131,8 @@ function sortByType(characters: Character[]): Character[] {
 </style>
 
 <script>
-  import type { CollectionEntry } from 'astro:content'
+  import type { CharacterType } from '../../lib/characters'
 
-  type Character = CollectionEntry<'characters'>
-  type CharacterType = Character['data']['type']
   type Counts = { [key in CharacterType]: number }
 
   const form = document.getElementById('custom-script-form') as HTMLFormElement

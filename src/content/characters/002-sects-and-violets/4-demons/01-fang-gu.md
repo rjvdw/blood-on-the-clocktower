@@ -1,6 +1,5 @@
 ---
 name: Fang Gu
-slug: fang-gu
 source: https://wiki.bloodontheclocktower.com/Fang_Gu
 type: Demon
 game: Sects & Violets

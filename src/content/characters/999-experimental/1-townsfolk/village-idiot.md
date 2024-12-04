@@ -1,6 +1,6 @@
 ---
 name: Village Idiot
-slug: village-idiot
+id: village-idiot
 source: https://wiki.bloodontheclocktower.com/Village_Idiot
 type: Townsfolk
 tagLine: >-

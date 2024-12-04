@@ -1,6 +1,5 @@
 ---
 name: Angel
-slug: angel
 source: https://wiki.bloodontheclocktower.com/Angel
 type: Fabled
 game: Any Game

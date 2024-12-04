@@ -1,6 +1,6 @@
 ---
 name: Choirboy
-slug: choirboy
+id: choirboy
 source: https://wiki.bloodontheclocktower.com/Choirboy
 type: Townsfolk
 tagLine:

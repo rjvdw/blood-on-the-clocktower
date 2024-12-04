@@ -1,6 +1,5 @@
 ---
 name: Librarian
-slug: librarian
 source: https://wiki.bloodontheclocktower.com/Librarian
 type: Townsfolk
 game: Trouble Brewing

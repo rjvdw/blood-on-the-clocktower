@@ -1,6 +1,6 @@
 ---
 name: Brooke
-slug: ken-rb/brooke
+id: ken-rb/brooke
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Minion
 game: Trust No One

@@ -1,6 +1,5 @@
 ---
 name: Innkeeper
-slug: innkeeper
 source: https://wiki.bloodontheclocktower.com/Innkeeper
 type: Townsfolk
 game: Bad Moon Rising

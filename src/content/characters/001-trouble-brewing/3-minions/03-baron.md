@@ -1,6 +1,5 @@
 ---
 name: Baron
-slug: baron
 source: https://wiki.bloodontheclocktower.com/Baron
 type: Minion
 game: Trouble Brewing

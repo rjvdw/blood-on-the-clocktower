@@ -1,6 +1,5 @@
 ---
 name: Fortune Teller
-slug: fortune-teller
 source: https://wiki.bloodontheclocktower.com/Fortune_Teller
 type: Townsfolk
 game: Trouble Brewing

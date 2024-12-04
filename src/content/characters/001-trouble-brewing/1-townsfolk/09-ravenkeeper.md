@@ -1,6 +1,5 @@
 ---
 name: Ravenkeeper
-slug: ravenkeeper
 source: https://wiki.bloodontheclocktower.com/Ravenkeeper
 type: Townsfolk
 game: Trouble Brewing

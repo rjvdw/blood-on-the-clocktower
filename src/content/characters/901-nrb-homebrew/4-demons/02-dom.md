@@ -1,6 +1,6 @@
 ---
 name: Dom
-slug: ken-rb/dom
+id: ken-rb/dom
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Demon
 game: Trust No One

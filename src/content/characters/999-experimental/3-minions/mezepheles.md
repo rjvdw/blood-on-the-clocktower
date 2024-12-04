@@ -1,6 +1,6 @@
 ---
 name: Mezepheles
-slug: mezepheles
+id: mezepheles
 source: https://wiki.bloodontheclocktower.com/Mezepheles
 type: Minion
 tagLine:

@@ -1,6 +1,6 @@
 ---
 name: Rosie
-slug: ken-rb/rosie
+id: ken-rb/rosie
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Outsider
 game: Trust No One

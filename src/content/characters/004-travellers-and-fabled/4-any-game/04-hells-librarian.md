@@ -1,6 +1,5 @@
 ---
 name: Hell's Librarian
-slug: hells-librarian
 source: https://wiki.bloodontheclocktower.com/Hell%27s_Librarian
 type: Fabled
 game: Any Game

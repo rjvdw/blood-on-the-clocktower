@@ -1,6 +1,6 @@
 ---
 name: Alchemist
-slug: alchemist
+id: alchemist
 source: https://wiki.bloodontheclocktower.com/Alchemist
 type: Townsfolk
 tagLine: You have a not-in-play Minion ability.

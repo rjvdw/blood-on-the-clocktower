@@ -1,6 +1,6 @@
 ---
 name: Acrobat
-slug: acrobat
+id: acrobat
 source: https://wiki.bloodontheclocktower.com/Acrobat
 type: Townsfolk
 tagLine: >-

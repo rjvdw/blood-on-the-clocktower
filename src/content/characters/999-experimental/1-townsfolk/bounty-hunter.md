@@ -1,6 +1,6 @@
 ---
 name: Bounty Hunter
-slug: bounty-hunter
+id: bounty-hunter
 source: https://wiki.bloodontheclocktower.com/Bounty_Hunter
 type: Townsfolk
 tagLine:

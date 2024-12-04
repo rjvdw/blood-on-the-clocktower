@@ -1,6 +1,6 @@
 ---
 name: Snitch
-slug: snitch
+id: snitch
 source: https://wiki.bloodontheclocktower.com/Snitch
 type: Outsider
 tagLine: Minions start knowing 3 not-in-play characters.

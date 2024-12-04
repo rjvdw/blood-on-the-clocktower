@@ -1,6 +1,6 @@
 ---
 name: Goblin
-slug: goblin
+id: goblin
 source: https://wiki.bloodontheclocktower.com/Goblin
 type: Minion
 tagLine:

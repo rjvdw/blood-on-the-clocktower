@@ -1,6 +1,5 @@
 ---
 name: Empath
-slug: empath
 source: https://wiki.bloodontheclocktower.com/Empath
 type: Townsfolk
 game: Trouble Brewing

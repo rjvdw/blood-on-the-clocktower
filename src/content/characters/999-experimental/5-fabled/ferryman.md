@@ -1,6 +1,6 @@
 ---
 name: Ferryman
-slug: ferryman
+id: ferryman
 source: https://wiki.bloodontheclocktower.com/Ferryman
 type: Fabled
 tagLine: On the final day, all dead players regain their vote token.

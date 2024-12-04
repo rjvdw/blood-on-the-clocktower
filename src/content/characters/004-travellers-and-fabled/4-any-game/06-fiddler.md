@@ -1,6 +1,5 @@
 ---
 name: Fiddler
-slug: fiddler
 source: https://wiki.bloodontheclocktower.com/Fiddler
 type: Fabled
 game: Any Game

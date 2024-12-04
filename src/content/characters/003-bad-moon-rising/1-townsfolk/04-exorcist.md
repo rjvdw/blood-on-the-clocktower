@@ -1,6 +1,5 @@
 ---
 name: Exorcist
-slug: exorcist
 source: https://wiki.bloodontheclocktower.com/Exorcist
 type: Townsfolk
 game: Bad Moon Rising

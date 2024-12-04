@@ -1,6 +1,5 @@
 ---
 name: Thief
-slug: thief
 source: https://wiki.bloodontheclocktower.com/Thief
 type: Traveller
 game: Trouble Brewing

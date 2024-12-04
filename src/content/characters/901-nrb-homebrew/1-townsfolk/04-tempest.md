@@ -1,6 +1,6 @@
 ---
 name: Tempest
-slug: ken-rb/tempest
+id: ken-rb/tempest
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Townsfolk
 game: Trust No One

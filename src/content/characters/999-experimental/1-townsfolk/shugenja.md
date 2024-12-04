@@ -1,6 +1,6 @@
 ---
 name: Shugenja
-slug: shugenja
+id: shugenja
 source: https://wiki.bloodontheclocktower.com/Shugenja
 type: Townsfolk
 tagLine:

@@ -1,6 +1,5 @@
 ---
 name: Town Crier
-slug: town-crier
 source: https://wiki.bloodontheclocktower.com/Town_Crier
 type: Townsfolk
 game: Sects & Violets

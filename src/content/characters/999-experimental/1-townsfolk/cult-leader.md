@@ -1,6 +1,6 @@
 ---
 name: Cult Leader
-slug: cult-leader
+id: cult-leader
 source: https://wiki.bloodontheclocktower.com/Cult_Leader
 type: Townsfolk
 tagLine:

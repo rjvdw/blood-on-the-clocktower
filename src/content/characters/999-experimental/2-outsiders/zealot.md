@@ -1,6 +1,6 @@
 ---
 name: Zealot
-slug: zealot
+id: zealot
 source: https://wiki.bloodontheclocktower.com/Zealot
 type: Outsider
 tagLine:

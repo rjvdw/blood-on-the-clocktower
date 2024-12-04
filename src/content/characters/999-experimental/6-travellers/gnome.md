@@ -1,6 +1,6 @@
 ---
 name: Gnome
-slug: gnome
+id: gnome
 source: https://wiki.bloodontheclocktower.com/Gnome
 type: Traveller
 tagLine:

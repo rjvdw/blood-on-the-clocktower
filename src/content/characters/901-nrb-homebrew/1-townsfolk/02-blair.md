@@ -1,6 +1,6 @@
 ---
 name: Blair
-slug: ken-rb/blair
+id: ken-rb/blair
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Townsfolk
 game: Trust No One

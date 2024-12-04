@@ -1,6 +1,6 @@
 ---
 name: Boomdandy
-slug: boomdandy
+id: boomdandy
 source: https://wiki.bloodontheclocktower.com/Boomdandy
 type: Minion
 tagLine:

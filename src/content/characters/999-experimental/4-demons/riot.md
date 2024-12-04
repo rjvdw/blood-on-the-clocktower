@@ -1,6 +1,6 @@
 ---
 name: Riot
-slug: riot
+id: riot
 source: https://wiki.bloodontheclocktower.com/Riot
 type: Demon
 tagLine:

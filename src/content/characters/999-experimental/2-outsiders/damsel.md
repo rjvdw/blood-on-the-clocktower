@@ -1,6 +1,6 @@
 ---
 name: Damsel
-slug: damsel
+id: damsel
 source: https://wiki.bloodontheclocktower.com/Damsel
 type: Outsider
 tagLine:

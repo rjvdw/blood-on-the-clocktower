@@ -1,6 +1,5 @@
 ---
 name: Apprentice
-slug: apprentice
 source: https://wiki.bloodontheclocktower.com/Apprentice
 type: Traveller
 game: Bad Moon Rising

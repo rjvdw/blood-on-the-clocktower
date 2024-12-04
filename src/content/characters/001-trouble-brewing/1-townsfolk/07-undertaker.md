@@ -1,6 +1,5 @@
 ---
 name: Undertaker
-slug: undertaker
 source: https://wiki.bloodontheclocktower.com/Undertaker
 type: Townsfolk
 game: Trouble Brewing

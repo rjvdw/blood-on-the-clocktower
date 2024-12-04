@@ -1,6 +1,5 @@
 ---
 name: Pacifist
-slug: pacifist
 source: https://wiki.bloodontheclocktower.com/Pacifist
 type: Townsfolk
 game: Bad Moon Rising

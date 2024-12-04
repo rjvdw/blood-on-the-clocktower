@@ -1,6 +1,5 @@
 ---
 name: Chambermaid
-slug: chambermaid
 source: https://wiki.bloodontheclocktower.com/Chambermaid
 type: Townsfolk
 game: Bad Moon Rising

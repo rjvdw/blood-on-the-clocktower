@@ -1,6 +1,6 @@
 ---
 name: Tom
-slug: ken-rb/tom
+id: ken-rb/tom
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Townsfolk
 game: Trust No One

@@ -1,6 +1,6 @@
 ---
 name: Vizier
-slug: vizier
+id: vizier
 source: https://wiki.bloodontheclocktower.com/Vizier
 type: Minion
 tagLine:

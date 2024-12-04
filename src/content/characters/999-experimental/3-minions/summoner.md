@@ -1,6 +1,6 @@
 ---
 name: Summoner
-slug: summoner
+id: summoner
 source: https://wiki.bloodontheclocktower.com/Summoner
 type: Minion
 tagLine: >-

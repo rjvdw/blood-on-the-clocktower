@@ -1,6 +1,6 @@
 ---
 name: Fearmonger
-slug: fearmonger
+id: fearmonger
 source: https://wiki.bloodontheclocktower.com/Fearmonger
 type: Minion
 tagLine: >-

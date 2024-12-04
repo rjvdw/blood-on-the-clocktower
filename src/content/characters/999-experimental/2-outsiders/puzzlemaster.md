@@ -1,6 +1,6 @@
 ---
 name: Puzzlemaster
-slug: puzzlemaster
+id: puzzlemaster
 source: https://wiki.bloodontheclocktower.com/Puzzlemaster
 type: Outsider
 tagLine:

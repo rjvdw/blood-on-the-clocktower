@@ -1,6 +1,6 @@
 ---
 name: Fisherman
-slug: fisherman
+id: fisherman
 source: https://wiki.bloodontheclocktower.com/Fisherman
 type: Townsfolk
 tagLine:

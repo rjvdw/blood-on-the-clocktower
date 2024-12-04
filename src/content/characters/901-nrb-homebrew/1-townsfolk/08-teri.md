@@ -1,6 +1,6 @@
 ---
 name: Teri
-slug: ken-rb/teri
+id: ken-rb/teri
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Townsfolk
 game: Trust No One

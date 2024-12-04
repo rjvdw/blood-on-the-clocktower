@@ -1,6 +1,5 @@
 ---
 name: Philosopher
-slug: philosopher
 source: https://wiki.bloodontheclocktower.com/Philosopher
 type: Townsfolk
 game: Sects & Violets

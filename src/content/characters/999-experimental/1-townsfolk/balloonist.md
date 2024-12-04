@@ -1,6 +1,6 @@
 ---
 name: Balloonist
-slug: balloonist
+id: balloonist
 source: https://wiki.bloodontheclocktower.com/Balloonist
 type: Townsfolk
 tagLine:

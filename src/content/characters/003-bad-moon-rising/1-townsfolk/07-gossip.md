@@ -1,6 +1,5 @@
 ---
 name: Gossip
-slug: gossip
 source: https://wiki.bloodontheclocktower.com/Gossip
 type: Townsfolk
 game: Bad Moon Rising

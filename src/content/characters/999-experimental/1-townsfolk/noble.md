@@ -1,6 +1,6 @@
 ---
 name: Noble
-slug: noble
+id: noble
 source: https://wiki.bloodontheclocktower.com/Noble
 type: Townsfolk
 tagLine: You start knowing 3 players, 1 and only 1 of which is evil.

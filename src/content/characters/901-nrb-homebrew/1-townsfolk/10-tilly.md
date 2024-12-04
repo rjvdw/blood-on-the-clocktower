@@ -1,6 +1,6 @@
 ---
 name: Tilly
-slug: ken-rb/tilly
+id: ken-rb/tilly
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Townsfolk
 game: Trust No One

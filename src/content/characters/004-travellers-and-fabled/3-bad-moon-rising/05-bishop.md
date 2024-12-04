@@ -1,6 +1,5 @@
 ---
 name: Bishop
-slug: bishop
 source: https://wiki.bloodontheclocktower.com/Bishop
 type: Traveller
 game: Bad Moon Rising

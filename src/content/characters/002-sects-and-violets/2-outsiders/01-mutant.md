@@ -1,6 +1,5 @@
 ---
 name: Mutant
-slug: mutant
 source: https://wiki.bloodontheclocktower.com/Mutant
 type: Outsider
 game: Sects & Violets

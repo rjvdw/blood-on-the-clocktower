@@ -1,6 +1,6 @@
 ---
 name: High Priestess
-slug: high-priestess
+id: high-priestess
 source: https://wiki.bloodontheclocktower.com/High_Priestess
 type: Townsfolk
 tagLine:

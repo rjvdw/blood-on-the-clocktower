@@ -1,6 +1,5 @@
 ---
 name: Voudon
-slug: voudon
 source: https://wiki.bloodontheclocktower.com/Voudon
 type: Traveller
 game: Bad Moon Rising

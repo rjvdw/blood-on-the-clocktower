@@ -1,6 +1,6 @@
 ---
 name: Storm Catcher
-slug: storm-catcher
+id: storm-catcher
 source: https://wiki.bloodontheclocktower.com/Storm_Catcher
 type: Fabled
 tagLine:

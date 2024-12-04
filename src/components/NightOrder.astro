@@ -1,8 +1,7 @@
 ---
-import type { CollectionEntry } from 'astro:content'
 import type { NightSchemaType } from '../content/schema/character'
+import type { Character } from '../lib/characters'
 
-type Character = CollectionEntry<'characters'>
 type NightOrder = Character['data']['nightOrder']
 type FirstNightCharacter = Character & {
   data: {

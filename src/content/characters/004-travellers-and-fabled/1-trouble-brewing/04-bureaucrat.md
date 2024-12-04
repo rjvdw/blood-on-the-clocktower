@@ -1,6 +1,5 @@
 ---
 name: Bureaucrat
-slug: bureaucrat
 source: https://wiki.bloodontheclocktower.com/Bureaucrat
 type: Traveller
 game: Trouble Brewing

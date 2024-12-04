@@ -1,6 +1,6 @@
 ---
 name: Golem
-slug: golem
+id: golem
 source: https://wiki.bloodontheclocktower.com/Golem
 type: Outsider
 tagLine:

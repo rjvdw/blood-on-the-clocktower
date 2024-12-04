@@ -1,6 +1,6 @@
 ---
 name: Holly
-slug: ken-rb/holly
+id: ken-rb/holly
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Minion
 game: Trust No One

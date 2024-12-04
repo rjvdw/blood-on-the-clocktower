@@ -1,6 +1,5 @@
 ---
 name: Juggler
-slug: juggler
 source: https://wiki.bloodontheclocktower.com/Juggler
 type: Townsfolk
 game: Sects & Violets

@@ -1,6 +1,6 @@
 ---
 name: Luke
-slug: ken-rb/luke
+id: ken-rb/luke
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Townsfolk
 game: Trust No One

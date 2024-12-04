@@ -1,6 +1,5 @@
 ---
 name: Washerwoman
-slug: washerwoman
 source: https://wiki.bloodontheclocktower.com/Washerwoman
 type: Townsfolk
 game: Trouble Brewing

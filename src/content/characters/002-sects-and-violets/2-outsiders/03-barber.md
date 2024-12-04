@@ -1,6 +1,5 @@
 ---
 name: Barber
-slug: barber
 source: https://wiki.bloodontheclocktower.com/Barber
 type: Outsider
 game: Sects & Violets

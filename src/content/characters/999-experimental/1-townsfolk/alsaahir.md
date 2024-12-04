@@ -1,6 +1,6 @@
 ---
 name: Alsaahir
-slug: alsaahir
+id: alsaahir
 source: https://wiki.bloodontheclocktower.com/Alsaahir
 type: Townsfolk
 tagLine:

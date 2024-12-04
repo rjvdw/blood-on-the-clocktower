@@ -1,6 +1,5 @@
 ---
 name: Imp
-slug: imp
 source: https://wiki.bloodontheclocktower.com/Imp
 type: Demon
 game: Trouble Brewing

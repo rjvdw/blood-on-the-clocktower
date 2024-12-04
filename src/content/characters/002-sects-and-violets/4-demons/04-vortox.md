@@ -1,6 +1,5 @@
 ---
 name: Vortox
-slug: vortox
 source: https://wiki.bloodontheclocktower.com/Vortox
 type: Demon
 game: Sects & Violets

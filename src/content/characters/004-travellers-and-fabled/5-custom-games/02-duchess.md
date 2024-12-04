@@ -1,6 +1,5 @@
 ---
 name: Duchess
-slug: duchess
 source: https://wiki.bloodontheclocktower.com/Duchess
 type: Fabled
 game: Custom Game

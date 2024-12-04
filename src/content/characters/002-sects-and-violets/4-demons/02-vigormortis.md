@@ -1,6 +1,5 @@
 ---
 name: Vigormortis
-slug: vigormortis
 source: https://wiki.bloodontheclocktower.com/Vigormortis
 type: Demon
 game: Sects & Violets

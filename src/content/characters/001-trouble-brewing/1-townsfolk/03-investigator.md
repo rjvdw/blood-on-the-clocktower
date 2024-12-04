@@ -1,6 +1,5 @@
 ---
 name: Investigator
-slug: investigator
 source: https://wiki.bloodontheclocktower.com/Investigator
 type: Townsfolk
 game: Trouble Brewing

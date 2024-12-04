@@ -1,6 +1,6 @@
 ---
 name: Eliott
-slug: ken-rb/eliott
+id: ken-rb/eliott
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Townsfolk
 game: Trust No One

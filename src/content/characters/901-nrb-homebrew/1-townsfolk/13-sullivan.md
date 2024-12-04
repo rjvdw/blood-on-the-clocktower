@@ -1,6 +1,6 @@
 ---
 name: Sullivan
-slug: ken-rb/sullivan
+id: ken-rb/sullivan
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Townsfolk
 game: Trust No One

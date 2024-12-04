@@ -1,6 +1,6 @@
 ---
 name: Leech
-slug: leech
+id: leech
 source: https://wiki.bloodontheclocktower.com/Lleech
 type: Demon
 tagLine: >-

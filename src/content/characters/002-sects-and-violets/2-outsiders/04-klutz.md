@@ -1,6 +1,5 @@
 ---
 name: Klutz
-slug: klutz
 source: https://wiki.bloodontheclocktower.com/Klutz
 type: Outsider
 game: Sects & Violets

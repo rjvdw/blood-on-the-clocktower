@@ -1,6 +1,6 @@
 ---
 name: Gardener
-slug: gardener
+id: gardener
 source: https://wiki.bloodontheclocktower.com/Gardener
 type: Fabled
 tagLine: The Storyteller assigns 1 or more players' characters.

@@ -1,6 +1,5 @@
 ---
 name: Godfather
-slug: godfather
 source: https://wiki.bloodontheclocktower.com/Godfather
 type: Minion
 game: Bad Moon Rising

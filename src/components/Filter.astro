@@ -50,12 +50,12 @@
 </style>
 
 <script>
-  import type { CollectionEntry } from 'astro:content'
+  import type { CharacterType } from '../lib/characters'
 
   type CharacterElement = HTMLElement & {
     dataset: {
       name: string
-      type: CollectionEntry<'characters'>['data']['type']
+      type: CharacterType
     }
   }
 

@@ -1,6 +1,6 @@
 ---
 name: Lord of Typhon
-slug: lord-of-typhon
+id: lord-of-typhon
 source: https://wiki.bloodontheclocktower.com/Lord_of_Typhon
 type: Demon
 tagLine: >-

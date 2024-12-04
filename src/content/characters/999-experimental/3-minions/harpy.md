@@ -1,6 +1,6 @@
 ---
 name: Harpy
-slug: harpy
+id: harpy
 source: https://wiki.bloodontheclocktower.com/Harpy
 type: Minion
 tagLine: >-

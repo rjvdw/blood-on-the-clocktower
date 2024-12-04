@@ -1,6 +1,6 @@
 ---
 name: Lil' Monsta
-slug: lil-monsta
+id: lil-monsta
 source: https://wiki.bloodontheclocktower.com/Lil%27_Monsta
 type: Demon
 tagLine:

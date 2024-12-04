@@ -1,6 +1,5 @@
 ---
 name: Drunk
-slug: drunk
 source: https://wiki.bloodontheclocktower.com/Drunk
 type: Outsider
 game: Trouble Brewing

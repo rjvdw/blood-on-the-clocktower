@@ -1,6 +1,6 @@
 ---
 name: Jon Gracey
-slug: ken-rb/jon-gracey
+id: ken-rb/jon-gracey
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Outsider
 game: Trust No One

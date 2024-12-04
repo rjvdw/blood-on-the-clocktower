@@ -1,6 +1,6 @@
 ---
 name: Carley
-slug: ken-rb/carley
+id: ken-rb/carley
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Demon
 game: Trust No One

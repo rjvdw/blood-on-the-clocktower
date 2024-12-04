@@ -35,8 +35,8 @@ import Layout from '../../layouts/Base.astro'
       const reader = new FileReader()
       reader.addEventListener('load', () => {
         try {
-          const [_meta, ...slugs] = JSON.parse(reader.result as string)
-          scriptField.value = slugs.join(' ')
+          const [_meta, ...ids] = JSON.parse(reader.result as string)
+          scriptField.value = ids.join(' ')
           form.submit()
         } catch (err) {
           showError(err)

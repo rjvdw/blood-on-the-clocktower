@@ -1,6 +1,6 @@
 ---
 name: Huntsman
-slug: huntsman
+id: huntsman
 source: https://wiki.bloodontheclocktower.com/Huntsman
 type: Townsfolk
 tagLine: >-

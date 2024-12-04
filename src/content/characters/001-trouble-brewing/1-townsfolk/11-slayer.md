@@ -1,6 +1,5 @@
 ---
 name: Slayer
-slug: slayer
 source: https://wiki.bloodontheclocktower.com/Slayer
 type: Townsfolk
 game: Trouble Brewing

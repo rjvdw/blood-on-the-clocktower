@@ -1,6 +1,5 @@
 ---
 name: Matron
-slug: matron
 source: https://wiki.bloodontheclocktower.com/Matron
 type: Traveller
 game: Bad Moon Rising

@@ -1,6 +1,5 @@
 ---
 name: Spy
-slug: spy
 source: https://wiki.bloodontheclocktower.com/Spy
 type: Minion
 game: Trouble Brewing

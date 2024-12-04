@@ -1,6 +1,6 @@
 ---
 name: Al-Hadikhia
-slug: al-hadikhia
+id: al-hadikhia
 source: https://wiki.bloodontheclocktower.com/Al-Hadikhia
 type: Demon
 tagLine: >-

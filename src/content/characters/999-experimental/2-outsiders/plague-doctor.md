@@ -1,6 +1,6 @@
 ---
 name: Plague Doctor
-slug: plague-doctor
+id: plague-doctor
 source: https://wiki.bloodontheclocktower.com/Plague_Doctor
 type: Outsider
 tagLine: If you die, the Storyteller gains a Minion ability.

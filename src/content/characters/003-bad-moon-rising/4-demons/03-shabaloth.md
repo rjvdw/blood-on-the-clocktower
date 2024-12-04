@@ -1,6 +1,5 @@
 ---
 name: Shabaloth
-slug: shabaloth
 source: https://wiki.bloodontheclocktower.com/Shabaloth
 type: Demon
 game: Bad Moon Rising

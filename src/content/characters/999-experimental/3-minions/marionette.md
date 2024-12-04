@@ -1,6 +1,6 @@
 ---
 name: Marionette
-slug: marionette
+id: marionette
 source: https://wiki.bloodontheclocktower.com/Marionette
 type: Minion
 tagLine:

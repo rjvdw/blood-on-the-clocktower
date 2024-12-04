@@ -1,6 +1,6 @@
 ---
 name: Ogre
-slug: ogre
+id: ogre
 source: https://wiki.bloodontheclocktower.com/Ogre
 type: Outsider
 tagLine: >-

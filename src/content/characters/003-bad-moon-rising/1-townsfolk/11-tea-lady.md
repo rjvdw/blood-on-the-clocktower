@@ -1,6 +1,5 @@
 ---
 name: Tea Lady
-slug: tea-lady
 source: https://wiki.bloodontheclocktower.com/Tea_Lady
 type: Townsfolk
 game: Bad Moon Rising

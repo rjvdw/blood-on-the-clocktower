@@ -1,6 +1,5 @@
 ---
 name: Courtier
-slug: courtier
 source: https://wiki.bloodontheclocktower.com/Courtier
 type: Townsfolk
 game: Bad Moon Rising

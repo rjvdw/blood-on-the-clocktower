@@ -1,6 +1,6 @@
 ---
 name: Yaggababble
-slug: yaggababble
+id: yaggababble
 source: https://wiki.bloodontheclocktower.com/Yaggababble
 type: Demon
 tagLine:

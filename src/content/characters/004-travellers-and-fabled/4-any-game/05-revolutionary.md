@@ -1,6 +1,5 @@
 ---
 name: Revolutionary
-slug: revolutionary
 source: https://wiki.bloodontheclocktower.com/Revolutionary
 type: Fabled
 game: Any Game

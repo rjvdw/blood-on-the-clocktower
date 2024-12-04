@@ -1,6 +1,5 @@
 ---
 name: Professor
-slug: professor
 source: https://wiki.bloodontheclocktower.com/Professor
 type: Townsfolk
 game: Bad Moon Rising

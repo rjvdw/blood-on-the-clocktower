@@ -1,6 +1,5 @@
 ---
 name: Oracle
-slug: oracle
 source: https://wiki.bloodontheclocktower.com/Oracle
 type: Townsfolk
 game: Sects & Violets

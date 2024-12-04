@@ -1,6 +1,5 @@
 ---
 name: Butler
-slug: butler
 source: https://wiki.bloodontheclocktower.com/Butler
 type: Outsider
 game: Trouble Brewing

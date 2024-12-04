@@ -1,6 +1,6 @@
 ---
 name: Amnesiac
-slug: amnesiac
+id: amnesiac
 source: https://wiki.bloodontheclocktower.com/Amnesiac
 type: Townsfolk
 tagLine: >-

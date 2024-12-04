@@ -1,6 +1,5 @@
 ---
 name: Virgin
-slug: virgin
 source: https://wiki.bloodontheclocktower.com/Virgin
 type: Townsfolk
 game: Trouble Brewing

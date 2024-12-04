@@ -1,6 +1,5 @@
 ---
 name: Scapegoat
-slug: scapegoat
 source: https://wiki.bloodontheclocktower.com/Scapegoat
 type: Traveller
 game: Trouble Brewing

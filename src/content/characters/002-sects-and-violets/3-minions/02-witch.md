@@ -1,6 +1,5 @@
 ---
 name: Witch
-slug: witch
 source: https://wiki.bloodontheclocktower.com/Witch
 type: Minion
 game: Sects & Violets

@@ -1,6 +1,6 @@
 ---
 name: Magician
-slug: magician
+id: magician
 source: https://wiki.bloodontheclocktower.com/Magician
 type: Townsfolk
 tagLine:

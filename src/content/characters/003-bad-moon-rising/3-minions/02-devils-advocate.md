@@ -1,6 +1,5 @@
 ---
 name: Devil's Advocate
-slug: devils-advocate
 source: https://wiki.bloodontheclocktower.com/Devil%27s_Advocate
 type: Minion
 game: Bad Moon Rising

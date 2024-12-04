@@ -1,6 +1,6 @@
 ---
 name: Lycanthrope
-slug: lycanthrope
+id: lycanthrope
 source: https://wiki.bloodontheclocktower.com/Lycanthrope
 type: Townsfolk
 tagLine: >-

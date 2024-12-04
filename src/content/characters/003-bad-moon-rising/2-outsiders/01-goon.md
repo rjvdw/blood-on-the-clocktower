@@ -1,6 +1,5 @@
 ---
 name: Goon
-slug: goon
 source: https://wiki.bloodontheclocktower.com/Goon
 type: Outsider
 game: Bad Moon Rising

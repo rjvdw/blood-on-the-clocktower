@@ -1,6 +1,5 @@
 ---
 name: Sage
-slug: sage
 source: https://wiki.bloodontheclocktower.com/Sage
 type: Townsfolk
 game: Sects & Violets

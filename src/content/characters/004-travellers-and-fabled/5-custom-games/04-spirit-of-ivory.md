@@ -1,6 +1,5 @@
 ---
 name: Spirit of Ivory
-slug: spirit-of-ivory
 source: https://wiki.bloodontheclocktower.com/Spirit_of_Ivory
 type: Fabled
 game: Custom Game

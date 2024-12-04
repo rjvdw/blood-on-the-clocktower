@@ -1,6 +1,5 @@
 ---
 name: Monk
-slug: monk
 source: https://wiki.bloodontheclocktower.com/Monk
 type: Townsfolk
 game: Trouble Brewing

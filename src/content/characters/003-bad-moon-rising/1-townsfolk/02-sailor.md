@@ -1,6 +1,5 @@
 ---
 name: Sailor
-slug: sailor
 source: https://wiki.bloodontheclocktower.com/Sailor
 type: Townsfolk
 game: Bad Moon Rising

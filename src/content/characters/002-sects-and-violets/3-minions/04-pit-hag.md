@@ -1,6 +1,5 @@
 ---
 name: Pit-Hag
-slug: pit-hag
 source: https://wiki.bloodontheclocktower.com/Pit-Hag
 type: Minion
 game: Sects & Violets

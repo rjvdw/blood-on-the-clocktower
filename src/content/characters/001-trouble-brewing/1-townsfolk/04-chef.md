@@ -1,6 +1,5 @@
 ---
 name: Chef
-slug: chef
 source: https://wiki.bloodontheclocktower.com/Chef
 type: Townsfolk
 game: Trouble Brewing

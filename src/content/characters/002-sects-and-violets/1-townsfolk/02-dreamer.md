@@ -1,6 +1,5 @@
 ---
 name: Dreamer
-slug: dreamer
 source: https://wiki.bloodontheclocktower.com/Dreamer
 type: Townsfolk
 game: Sects & Violets

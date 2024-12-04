@@ -1,6 +1,5 @@
 ---
 name: Barista
-slug: barista
 source: https://wiki.bloodontheclocktower.com/Barista
 type: Traveller
 game: Sects & Violets

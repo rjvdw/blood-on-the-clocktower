@@ -1,6 +1,5 @@
 ---
 name: Buddhist
-slug: buddhist
 source: https://wiki.bloodontheclocktower.com/Buddhist
 type: Fabled
 game: Any Game

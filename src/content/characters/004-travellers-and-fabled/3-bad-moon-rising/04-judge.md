@@ -1,6 +1,5 @@
 ---
 name: Judge
-slug: judge
 source: https://wiki.bloodontheclocktower.com/Judge
 type: Traveller
 game: Bad Moon Rising

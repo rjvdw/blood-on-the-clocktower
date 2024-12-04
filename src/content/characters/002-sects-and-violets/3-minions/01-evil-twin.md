@@ -1,6 +1,5 @@
 ---
 name: Evil Twin
-slug: evil-twin
 source: https://wiki.bloodontheclocktower.com/Evil_Twin
 type: Minion
 game: Sects & Violets

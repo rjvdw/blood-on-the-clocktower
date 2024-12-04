@@ -1,6 +1,5 @@
 ---
 name: Clockmaker
-slug: clockmaker
 source: https://wiki.bloodontheclocktower.com/Clockmaker
 type: Townsfolk
 game: Sects & Violets

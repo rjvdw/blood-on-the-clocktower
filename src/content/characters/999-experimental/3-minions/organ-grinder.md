@@ -1,6 +1,6 @@
 ---
 name: Organ Grinder
-slug: organ-grinder
+id: organ-grinder
 source: https://wiki.bloodontheclocktower.com/Organ_Grinder
 type: Minion
 tagLine:

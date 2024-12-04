@@ -1,6 +1,5 @@
 ---
 name: Snake Charmer
-slug: snake-charmer
 source: https://wiki.bloodontheclocktower.com/Snake_Charmer
 type: Townsfolk
 game: Sects & Violets

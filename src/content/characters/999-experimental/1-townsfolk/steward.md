@@ -1,6 +1,6 @@
 ---
 name: Steward
-slug: steward
+id: steward
 source: https://wiki.bloodontheclocktower.com/Steward
 type: Townsfolk
 tagLine: You start knowing 1 good player.

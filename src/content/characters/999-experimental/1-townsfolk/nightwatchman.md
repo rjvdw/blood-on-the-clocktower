@@ -1,6 +1,6 @@
 ---
 name: Nightwatchman
-slug: nightwatchman
+id: nightwatchman
 source: https://wiki.bloodontheclocktower.com/Nightwatchman
 type: Townsfolk
 tagLine: >-

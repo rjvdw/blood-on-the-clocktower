@@ -1,6 +1,6 @@
 ---
 name: Bootlegger
-slug: bootlegger
+id: bootlegger
 source: https://wiki.bloodontheclocktower.com/Bootlegger
 type: Fabled
 tagLine: This script has homebrew characters or rules.

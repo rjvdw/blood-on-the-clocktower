@@ -1,6 +1,6 @@
 ---
 name: Farmer
-slug: farmer
+id: farmer
 source: https://wiki.bloodontheclocktower.com/Farmer
 type: Townsfolk
 tagLine: If you die at night, an alive good player becomes a Farmer.

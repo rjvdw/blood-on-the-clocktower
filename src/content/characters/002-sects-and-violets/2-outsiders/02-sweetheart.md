@@ -1,6 +1,5 @@
 ---
 name: Sweetheart
-slug: sweetheart
 source: https://wiki.bloodontheclocktower.com/Sweetheart
 type: Outsider
 game: Sects & Violets

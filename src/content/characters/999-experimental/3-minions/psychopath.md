@@ -1,6 +1,6 @@
 ---
 name: Psychpath
-slug: psychopath
+id: psychopath
 source: https://wiki.bloodontheclocktower.com/Psychopath
 type: Minion
 tagLine: >-

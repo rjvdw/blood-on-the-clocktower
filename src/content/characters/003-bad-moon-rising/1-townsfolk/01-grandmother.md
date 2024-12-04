@@ -1,6 +1,5 @@
 ---
 name: Grandmother
-slug: grandmother
 source: https://wiki.bloodontheclocktower.com/Grandmother
 type: Townsfolk
 game: Bad Moon Rising

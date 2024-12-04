@@ -1,6 +1,5 @@
 ---
 name: Recluse
-slug: recluse
 source: https://wiki.bloodontheclocktower.com/Recluse
 type: Outsider
 game: Trouble Brewing

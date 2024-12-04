@@ -1,6 +1,5 @@
 ---
 name: Tinker
-slug: tinker
 source: https://wiki.bloodontheclocktower.com/Tinker
 type: Outsider
 game: Bad Moon Rising

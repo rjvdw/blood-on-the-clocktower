@@ -1,6 +1,5 @@
 ---
 name: Moonchild
-slug: moonchild
 source: https://wiki.bloodontheclocktower.com/Moonchild
 type: Outsider
 game: Bad Moon Rising

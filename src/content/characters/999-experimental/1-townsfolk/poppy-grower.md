@@ -1,6 +1,6 @@
 ---
 name: Poppy Grower
-slug: poppy-grower
+id: poppy-grower
 source: https://wiki.bloodontheclocktower.com/Poppy_Grower
 type: Townsfolk
 tagLine:

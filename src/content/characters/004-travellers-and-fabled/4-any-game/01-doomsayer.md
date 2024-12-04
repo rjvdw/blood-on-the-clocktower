@@ -1,6 +1,5 @@
 ---
 name: Doomsayer
-slug: doomsayer
 source: https://wiki.bloodontheclocktower.com/Doomsayer
 type: Fabled
 game: Any Game

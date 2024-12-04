@@ -1,6 +1,5 @@
 ---
 name: Minstrel
-slug: minstrel
 source: https://wiki.bloodontheclocktower.com/Minstrel
 type: Townsfolk
 game: Bad Moon Rising

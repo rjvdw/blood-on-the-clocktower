@@ -1,6 +1,5 @@
 ---
 name: Poisoner
-slug: poisoner
 source: https://wiki.bloodontheclocktower.com/Poisoner
 type: Minion
 game: Trouble Brewing

@@ -1,6 +1,5 @@
 ---
 name: No Dashii
-slug: no-dashii
 source: https://wiki.bloodontheclocktower.com/No_Dashii
 type: Demon
 game: Sects & Violets

@@ -1,6 +1,5 @@
 ---
 name: Soldier
-slug: soldier
 source: https://wiki.bloodontheclocktower.com/Soldier
 type: Townsfolk
 game: Trouble Brewing

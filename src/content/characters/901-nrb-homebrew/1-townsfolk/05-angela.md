@@ -1,6 +1,6 @@
 ---
 name: Angela
-slug: ken-rb/angela
+id: ken-rb/angela
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Townsfolk
 game: Trust No One

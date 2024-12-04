@@ -1,6 +1,6 @@
 ---
 name: Tempest
-slug: nrb-homebrew/tempest
+id: nrb-homebrew/tempest
 source: https://imgur.com/a/if-youre-sullivan-then-who-am-i-nrb-homebrew-script-Cc4elqZ
 type: Minion
 game: If You're Sullivan Then Who Am I?

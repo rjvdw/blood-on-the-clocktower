@@ -1,6 +1,5 @@
 ---
 name: Zombuul
-slug: zombuul
 source: https://wiki.bloodontheclocktower.com/Zombuul
 type: Demon
 game: Bad Moon Rising

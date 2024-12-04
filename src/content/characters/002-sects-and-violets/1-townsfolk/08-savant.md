@@ -1,6 +1,5 @@
 ---
 name: Savant
-slug: savant
 source: https://wiki.bloodontheclocktower.com/Savant
 type: Townsfolk
 game: Sects & Violets

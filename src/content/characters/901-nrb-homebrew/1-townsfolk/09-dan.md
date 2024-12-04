@@ -1,6 +1,6 @@
 ---
 name: Dan
-slug: ken-rb/dan
+id: ken-rb/dan
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Townsfolk
 game: Trust No One

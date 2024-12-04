@@ -1,6 +1,6 @@
 ---
 name: Daddy Ben
-slug: ken-rb/daddy-ben
+id: ken-rb/daddy-ben
 source: https://imgur.com/a/kens-nrb-botc-homebrew-JQyD9m5
 type: Demon
 game: Trust No One

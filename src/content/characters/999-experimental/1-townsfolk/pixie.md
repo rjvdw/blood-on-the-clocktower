@@ -1,6 +1,6 @@
 ---
 name: Pixie
-slug: pixie
+id: pixie
 source: https://wiki.bloodontheclocktower.com/Pixie
 type: Townsfolk
 tagLine:

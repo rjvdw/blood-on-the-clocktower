@@ -1,6 +1,6 @@
 ---
 name: Preacher
-slug: preacher
+id: preacher
 source: https://wiki.bloodontheclocktower.com/Preacher
 type: Townsfolk
 tagLine: >-

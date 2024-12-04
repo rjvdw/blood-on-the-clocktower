@@ -1,6 +1,6 @@
 ---
 name: Legion
-slug: legion
+id: legion
 source: https://wiki.bloodontheclocktower.com/Legion
 type: Demon
 tagLine:

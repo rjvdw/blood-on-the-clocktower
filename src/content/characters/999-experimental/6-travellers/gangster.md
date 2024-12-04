@@ -1,6 +1,6 @@
 ---
 name: Gangster
-slug: gangster
+id: gangster
 source: https://wiki.bloodontheclocktower.com/Gangster
 type: Traveller
 tagLine:

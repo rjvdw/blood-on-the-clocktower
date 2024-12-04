@@ -1,8 +1,8 @@
 ---
-import { getCollection } from 'astro:content'
 import Layout from '../layouts/Base.astro'
 import CharactersByType from '../components/CharactersByType.astro'
 import Filter from '../components/Filter.astro'
+import { getCharacters } from '../lib/characters'
 
 export async function getStaticPaths() {
   return [
@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 }
 
 const { title } = Astro.props
-const characters = await getCollection('characters', ({ data }) => data.game === title)
+const characters = await getCharacters(({ data }) => data.game === title)
 ---
 
 <Layout title={`${title} | Blood on the Clocktower`}>

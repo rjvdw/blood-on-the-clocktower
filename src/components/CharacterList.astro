@@ -1,9 +1,8 @@
 ---
-import type { CollectionEntry } from 'astro:content'
 import { getBotcId } from '../lib/botc-com'
 import NightOrder from './NightOrder.astro'
+import type { Character } from '../lib/characters'
 
-type Character = CollectionEntry<'characters'>
 export type Props = {
   characters: Character[]
 }
@@ -25,7 +24,7 @@ function clz(character: Character): string {
         data-type={character.data.type}
       >
         <dt>
-          <a href={`/c/${character.slug}`}>{character.data.name}</a>
+          <a href={`/c/${character.id}`}>{character.data.name}</a>
         </dt>
         <dd class="tag-list">{character.data.tagLine}</dd>
         <dd>

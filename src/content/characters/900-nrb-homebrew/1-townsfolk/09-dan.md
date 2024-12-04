@@ -1,6 +1,6 @@
 ---
 name: Dan
-slug: nrb-homebrew/dan
+id: nrb-homebrew/dan
 source: https://imgur.com/a/if-youre-sullivan-then-who-am-i-nrb-homebrew-script-Cc4elqZ
 type: Townsfolk
 game: If You're Sullivan Then Who Am I?

@@ -1,6 +1,5 @@
 ---
 name: Assassin
-slug: assassin
 source: https://wiki.bloodontheclocktower.com/Assassin
 type: Minion
 game: Bad Moon Rising
