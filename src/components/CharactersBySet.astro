@@ -27,11 +27,11 @@ function groupBySet(characters: Character[]): Grouped {
 
 {
   charactersBySet.map(({ set, characters }) => (
-    <>
+    <section class="character-group">
       <h2>
-        {set ?? 'Experimental'} ({characters.length})
+        {set ?? 'Experimental'} (<span class="character-group-size">{characters.length}</span>)
       </h2>
       <CharactersByType characters={characters} />
-    </>
+    </section>
   ))
 }

@@ -105,5 +105,20 @@
     document.querySelectorAll<CharacterElement>('.character').forEach((ch) => {
       ch.hidden = hidden(ch.dataset)
     })
+
+    document.querySelectorAll<HTMLElement>('.character-group').forEach((section) => {
+      const sizeEl = section.querySelector<HTMLElement>('.character-group-size')
+      section.hidden = true
+
+      let count = 0
+      for (const ch of section.querySelectorAll<CharacterElement>('.character')) {
+        if (!ch.hidden) {
+          section.hidden = false
+          count += 1
+        }
+      }
+
+      sizeEl!.innerHTML = String(count)
+    })
   }
 </script>

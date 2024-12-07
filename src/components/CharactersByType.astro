@@ -25,11 +25,11 @@ function groupByType(characters: Character[]): Grouped {
 
 {
   charactersByType.map(({ type, characters }) => (
-    <>
+    <section class="character-group">
       <h3>
-        {type} ({characters.length})
+        {type} (<span class="character-group-size">{characters.length}</span>)
       </h3>
       <CharacterList characters={characters} />
-    </>
+    </section>
   ))
 }
