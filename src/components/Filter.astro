@@ -6,8 +6,8 @@
   <fieldset>
     <legend>Filter</legend>
 
-    <label for="filter:name">Name</label>
-    <input type="text" id="filter:name" />
+    <label for="filter:text">Text</label>
+    <input type="text" id="filter:text" />
 
     <label for="filter:townsfolk">Townsfolk</label>
     <input type="checkbox" id="filter:townsfolk" checked />
@@ -55,12 +55,15 @@
   type CharacterElement = HTMLElement & {
     dataset: {
       name: string
+      tagLine: string
       type: CharacterType
+      firstNight: string | undefined
+      otherNights: string | undefined
     }
   }
 
   const form = document.getElementById('filter:form') as HTMLFormElement
-  const nameFilter = getInput('filter:name')
+  const textFilter = getInput('filter:text')
   const townsfolkFilter = getCheckbox('filter:townsfolk')
   const outsiderFilter = getCheckbox('filter:outsider')
   const minionFilter = getCheckbox('filter:minion')
@@ -92,9 +95,9 @@
   }
 
   function update() {
-    const nameValue = nameFilter.value.toLocaleLowerCase()
-    const hidden = ({ name, type }: CharacterElement['dataset']) =>
-      name.toLocaleLowerCase().indexOf(nameValue) === -1 ||
+    const textValue = textFilter.value.toLocaleLowerCase()
+    const hidden = ({ name, tagLine, type, firstNight, otherNights }: CharacterElement['dataset']) =>
+      notContainedIn(textValue, name, tagLine, firstNight, otherNights) ||
       (type === 'Townsfolk' && !townsfolkFilter.checked) ||
       (type === 'Outsider' && !outsiderFilter.checked) ||
       (type === 'Minion' && !minionFilter.checked) ||
@@ -120,5 +123,13 @@
 
       sizeEl!.innerHTML = String(count)
     })
+  }
+
+  function notContainedIn(needle: string, ...haystacks: (string | undefined)[]): boolean {
+    return haystacks.every((haystack) => !contains(haystack, needle))
+  }
+
+  function contains(haystack: string | undefined, needle: string): boolean {
+    return (haystack?.toLocaleLowerCase()?.indexOf(needle) ?? -1) !== -1
   }
 </script>

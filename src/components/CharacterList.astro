@@ -21,6 +21,9 @@ function clz(character: Character): string {
         class:list={['character', clz(character)]}
         data-botc-id={getBotcId(character)}
         data-name={character.data.name}
+        data-tag-line={character.data.tagLine}
+        data-first-night={character.data.nightOrder?.first?.description}
+        data-other-nights={character.data.nightOrder?.other?.description}
         data-type={character.data.type}
       >
         <dt>
